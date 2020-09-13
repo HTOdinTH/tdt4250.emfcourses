@@ -768,7 +768,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 		addEEnumLiteral(levelCodeEEnum, LevelCode.HIGH);
 
 		// Initialize data types
-		initEDataType(courseCodeEDataType, Object.class, "CourseCode", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(courseCodeEDataType, String.class, "CourseCode", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -804,7 +804,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	protected void create_1Annotations() {
 		String source = "http://www.eclipse.org/acceleo/query/1.0";
 		addAnnotation(yearEClass, source,
-				new String[] { "fullCredits", "self.semesters.slots.maxCredits->sum() >= 60" });
+				new String[] { "fullCredits", "self.semesters.slots.maxCredits->sum() >= 60.0" });
 	}
 
 	/**

@@ -31,6 +31,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
+	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CODE_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,7 +48,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object code;
+	protected String code = CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -115,7 +125,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 */
 	@Override
-	public Object getCode() {
+	public String getCode() {
 		return code;
 	}
 
@@ -125,8 +135,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 */
 	@Override
-	public void setCode(Object newCode) {
-		Object oldCode = code;
+	public void setCode(String newCode) {
+		String oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.COURSE__CODE, oldCode, code));
@@ -231,7 +241,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case EMFCoursesPackage.COURSE__CODE:
-			setCode(newValue);
+			setCode((String) newValue);
 			return;
 		case EMFCoursesPackage.COURSE__NAME:
 			setName((String) newValue);
@@ -255,7 +265,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case EMFCoursesPackage.COURSE__CODE:
-			setCode((Object) null);
+			setCode(CODE_EDEFAULT);
 			return;
 		case EMFCoursesPackage.COURSE__NAME:
 			setName(NAME_EDEFAULT);
@@ -279,7 +289,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case EMFCoursesPackage.COURSE__CODE:
-			return code != null;
+			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case EMFCoursesPackage.COURSE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case EMFCoursesPackage.COURSE__CREDITS:

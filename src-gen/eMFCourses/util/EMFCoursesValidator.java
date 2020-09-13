@@ -112,7 +112,7 @@ public class EMFCoursesValidator extends EObjectValidator {
 		case EMFCoursesPackage.LEVEL_CODE:
 			return validateLevelCode(value, diagnostics, context);
 		case EMFCoursesPackage.COURSE_CODE:
-			return validateCourseCode(value, diagnostics, context);
+			return validateCourseCode((String) value, diagnostics, context);
 		default:
 			return true;
 		}
@@ -238,7 +238,7 @@ public class EMFCoursesValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String YEAR__FULL_CREDITS__EEXPRESSION = "self.semesters.slots.maxCredits->sum() >= 60";
+	protected static final String YEAR__FULL_CREDITS__EEXPRESSION = "self.semesters.slots.maxCredits->sum() >= 60.0";
 
 	/**
 	 * Validates the fullCredits constraint of '<em>Year</em>'.
@@ -304,7 +304,7 @@ public class EMFCoursesValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCourseCode(Object courseCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCourseCode(String courseCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = validateCourseCode_Pattern(courseCode, diagnostics, context);
 		return result;
 	}
@@ -333,7 +333,7 @@ public class EMFCoursesValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCourseCode_Pattern(Object courseCode, DiagnosticChain diagnostics,
+	public boolean validateCourseCode_Pattern(String courseCode, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return validatePattern(EMFCoursesPackage.Literals.COURSE_CODE, courseCode, COURSE_CODE__PATTERN__VALUES,
 				diagnostics, context);

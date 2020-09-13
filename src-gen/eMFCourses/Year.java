@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see eMFCourses.EMFCoursesPackage#getYear()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='fullCredits'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 fullCredits='self.semesters.slots.maxCredits-&gt;sum() &gt;= 60'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 fullCredits='self.semesters.slots.maxCredits-&gt;sum() &gt;= 60.0'"
  * @generated
  */
 public interface Year extends EObject {

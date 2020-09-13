@@ -614,7 +614,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * The meta object id for the '<em>Course Code</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.lang.Object
+	 * @see java.lang.String
 	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getCourseCode()
 	 * @generated
 	 */
@@ -1006,12 +1006,12 @@ public interface EMFCoursesPackage extends EPackage {
 	EEnum getStatusCode();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.Object <em>Course Code</em>}'.
+	 * Returns the meta object for data type '{@link java.lang.String <em>Course Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Course Code</em>'.
-	 * @see java.lang.Object
-	 * @model instanceClass="java.lang.Object"
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
 	 *        extendedMetaData="pattern='\\p{L}+\\d+'"
 	 * @generated
 	 */
@@ -1352,7 +1352,7 @@ public interface EMFCoursesPackage extends EPackage {
 		 * The meta object literal for the '<em>Course Code</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.lang.Object
+		 * @see java.lang.String
 		 * @see eMFCourses.impl.EMFCoursesPackageImpl#getCourseCode()
 		 * @generated
 		 */

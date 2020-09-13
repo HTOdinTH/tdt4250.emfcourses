@@ -39,7 +39,7 @@
       <details key="constraints" value="fullCredits"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
-      <details key="fullCredits" value="self.semesters.slots.maxCredits->sum() >= 60"/>
+      <details key="fullCredits" value="self.semesters.slots.maxCredits->sum() >= 60.0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
         eOpposite="#//Programme/rootYears"/>
