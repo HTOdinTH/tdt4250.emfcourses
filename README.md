@@ -18,7 +18,7 @@ src-gen/eMFCourses.impl:
 - YearImpl 
 
 src-gen/eMFCourses.util:
-- EMFCoursesValidator line 171
+- EMFCoursesValidator
 
 (lookup "@generated NOT")
 
