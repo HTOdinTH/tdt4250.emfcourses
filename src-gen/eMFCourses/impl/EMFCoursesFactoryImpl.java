@@ -63,12 +63,12 @@ public class EMFCoursesFactoryImpl extends EFactoryImpl implements EMFCoursesFac
 			return createCourse();
 		case EMFCoursesPackage.PROGRAMME:
 			return createProgramme();
+		case EMFCoursesPackage.YEAR:
+			return createYear();
 		case EMFCoursesPackage.SEMESTER:
 			return createSemester();
 		case EMFCoursesPackage.SELECTION_SLOT:
 			return createSelectionSlot();
-		case EMFCoursesPackage.CONSTRAINT_SLOT:
-			return createConstraintSlot();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,10 +82,10 @@ public class EMFCoursesFactoryImpl extends EFactoryImpl implements EMFCoursesFac
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case EMFCoursesPackage.LEVEL_CODE:
-			return createLevelCodeFromString(eDataType, initialValue);
 		case EMFCoursesPackage.STATUS_CODE:
 			return createStatusCodeFromString(eDataType, initialValue);
+		case EMFCoursesPackage.LEVEL_CODE:
+			return createLevelCodeFromString(eDataType, initialValue);
 		case EMFCoursesPackage.COURSE_CODE:
 			return createCourseCodeFromString(eDataType, initialValue);
 		default:
@@ -101,10 +101,10 @@ public class EMFCoursesFactoryImpl extends EFactoryImpl implements EMFCoursesFac
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case EMFCoursesPackage.LEVEL_CODE:
-			return convertLevelCodeToString(eDataType, instanceValue);
 		case EMFCoursesPackage.STATUS_CODE:
 			return convertStatusCodeToString(eDataType, instanceValue);
+		case EMFCoursesPackage.LEVEL_CODE:
+			return convertLevelCodeToString(eDataType, instanceValue);
 		case EMFCoursesPackage.COURSE_CODE:
 			return convertCourseCodeToString(eDataType, instanceValue);
 		default:
@@ -151,6 +151,17 @@ public class EMFCoursesFactoryImpl extends EFactoryImpl implements EMFCoursesFac
 	 * @generated
 	 */
 	@Override
+	public Year createYear() {
+		YearImpl year = new YearImpl();
+		return year;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Semester createSemester() {
 		SemesterImpl semester = new SemesterImpl();
 		return semester;
@@ -165,17 +176,6 @@ public class EMFCoursesFactoryImpl extends EFactoryImpl implements EMFCoursesFac
 	public SelectionSlot createSelectionSlot() {
 		SelectionSlotImpl selectionSlot = new SelectionSlotImpl();
 		return selectionSlot;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ConstraintSlot createConstraintSlot() {
-		ConstraintSlotImpl constraintSlot = new ConstraintSlotImpl();
-		return constraintSlot;
 	}
 
 	/**

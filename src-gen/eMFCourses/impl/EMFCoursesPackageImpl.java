@@ -14,6 +14,7 @@ import eMFCourses.Semester;
 import eMFCourses.Slot;
 import eMFCourses.StatusCode;
 
+import eMFCourses.Year;
 import eMFCourses.util.EMFCoursesValidator;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -54,6 +55,13 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	private EClass programmeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yearEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,7 +280,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
-	public EReference getProgramme_RootSemesters() {
+	public EReference getProgramme_RootYears() {
 		return (EReference) programmeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -302,6 +310,86 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getProgramme_Length() {
+		return (EAttribute) programmeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProgramme_TotalCredits() {
+		return (EAttribute) programmeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getYear() {
+		return yearEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getYear_Programme() {
+		return (EReference) yearEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getYear_Semesters() {
+		return (EReference) yearEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getYear_NextYearOptions() {
+		return (EReference) yearEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getYear_PreviousYear() {
+		return (EReference) yearEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getYear_TotalCredits() {
+		return (EAttribute) yearEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSemester() {
 		return semesterEClass;
 	}
@@ -312,7 +400,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
-	public EReference getSemester_Programme() {
+	public EReference getSemester_Slots() {
 		return (EReference) semesterEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -322,8 +410,8 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
-	public EReference getSemester_Slots() {
-		return (EReference) semesterEClass.getEStructuralFeatures().get(1);
+	public EAttribute getSemester_Specialization() {
+		return (EAttribute) semesterEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -332,8 +420,8 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
-	public EReference getSemester_NextSemesterOptions() {
-		return (EReference) semesterEClass.getEStructuralFeatures().get(2);
+	public EAttribute getSemester_MaxCredits() {
+		return (EAttribute) semesterEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -342,7 +430,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
-	public EReference getSemester_PreviousSemester() {
+	public EReference getSemester_Year() {
 		return (EReference) semesterEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -352,7 +440,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSemester_Specialization() {
+	public EAttribute getSemester_Season() {
 		return (EAttribute) semesterEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -507,16 +595,25 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 		createEAttribute(courseEClass, COURSE__LEVEL);
 
 		programmeEClass = createEClass(PROGRAMME);
-		createEReference(programmeEClass, PROGRAMME__ROOT_SEMESTERS);
+		createEReference(programmeEClass, PROGRAMME__ROOT_YEARS);
 		createEAttribute(programmeEClass, PROGRAMME__CODE);
 		createEAttribute(programmeEClass, PROGRAMME__NAME);
+		createEAttribute(programmeEClass, PROGRAMME__LENGTH);
+		createEAttribute(programmeEClass, PROGRAMME__TOTAL_CREDITS);
+
+		yearEClass = createEClass(YEAR);
+		createEReference(yearEClass, YEAR__PROGRAMME);
+		createEReference(yearEClass, YEAR__SEMESTERS);
+		createEReference(yearEClass, YEAR__NEXT_YEAR_OPTIONS);
+		createEReference(yearEClass, YEAR__PREVIOUS_YEAR);
+		createEAttribute(yearEClass, YEAR__TOTAL_CREDITS);
 
 		semesterEClass = createEClass(SEMESTER);
-		createEReference(semesterEClass, SEMESTER__PROGRAMME);
 		createEReference(semesterEClass, SEMESTER__SLOTS);
-		createEReference(semesterEClass, SEMESTER__NEXT_SEMESTER_OPTIONS);
-		createEReference(semesterEClass, SEMESTER__PREVIOUS_SEMESTER);
 		createEAttribute(semesterEClass, SEMESTER__SPECIALIZATION);
+		createEAttribute(semesterEClass, SEMESTER__MAX_CREDITS);
+		createEReference(semesterEClass, SEMESTER__YEAR);
+		createEAttribute(semesterEClass, SEMESTER__SEASON);
 
 		slotEClass = createEClass(SLOT);
 		createEAttribute(slotEClass, SLOT__MAX_CREDITS);
@@ -530,8 +627,8 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 		constraintSlotEClass = createEClass(CONSTRAINT_SLOT);
 
 		// Create enums
-		levelCodeEEnum = createEEnum(LEVEL_CODE);
 		statusCodeEEnum = createEEnum(STATUS_CODE);
+		levelCodeEEnum = createEEnum(LEVEL_CODE);
 
 		// Create data types
 		courseCodeEDataType = createEDataType(COURSE_CODE);
@@ -590,31 +687,50 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 
 		initEClass(programmeEClass, Programme.class, "Programme", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProgramme_RootSemesters(), this.getSemester(), this.getSemester_Programme(), "rootSemesters",
-				null, 1, -1, Programme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramme_RootYears(), this.getYear(), this.getYear_Programme(), "rootYears", null, 1, -1,
+				Programme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProgramme_Code(), ecorePackage.getEString(), "code", null, 1, 1, Programme.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProgramme_Name(), ecorePackage.getEString(), "name", null, 0, 1, Programme.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProgramme_Length(), ecorePackage.getEInt(), "length", null, 0, 1, Programme.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProgramme_TotalCredits(), ecorePackage.getEFloat(), "totalCredits", null, 0, 1,
+				Programme.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				IS_DERIVED, IS_ORDERED);
+
+		initEClass(yearEClass, Year.class, "Year", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYear_Programme(), this.getProgramme(), this.getProgramme_RootYears(), "programme", null, 0, 1,
+				Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYear_Semesters(), this.getSemester(), this.getSemester_Year(), "semesters", null, 2, 2,
+				Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYear_NextYearOptions(), this.getYear(), this.getYear_PreviousYear(), "nextYearOptions", null,
+				0, -1, Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYear_PreviousYear(), this.getYear(), this.getYear_NextYearOptions(), "previousYear", null, 0,
+				1, Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYear_TotalCredits(), ecorePackage.getEFloat(), "totalCredits", null, 0, 1, Year.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(semesterEClass, Semester.class, "Semester", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSemester_Programme(), this.getProgramme(), this.getProgramme_RootSemesters(), "programme",
-				null, 0, 1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSemester_Slots(), this.getSlot(), this.getSlot_Semester(), "slots", null, 0, -1,
 				Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSemester_NextSemesterOptions(), this.getSemester(), this.getSemester_PreviousSemester(),
-				"nextSemesterOptions", null, 0, -1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSemester_PreviousSemester(), this.getSemester(), this.getSemester_NextSemesterOptions(),
-				"previousSemester", null, 0, 1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSemester_Specialization(), ecorePackage.getEString(), "Specialization", null, 0, 1,
 				Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSemester_MaxCredits(), ecorePackage.getEFloat(), "maxCredits", null, 0, 1, Semester.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getSemester_Year(), this.getYear(), this.getYear_Semesters(), "year", null, 1, 1, Semester.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSemester_Season(), ecorePackage.getEString(), "Season", null, 0, 1, Semester.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(slotEClass, Slot.class, "Slot", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSlot_MaxCredits(), ecorePackage.getEFloat(), "maxCredits", "7.5", 1, 1, Slot.class,
@@ -635,22 +751,22 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(constraintSlotEClass, ConstraintSlot.class, "ConstraintSlot", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(constraintSlotEClass, ConstraintSlot.class, "ConstraintSlot", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
+		initEEnum(statusCodeEEnum, StatusCode.class, "StatusCode");
+		addEEnumLiteral(statusCodeEEnum, StatusCode.OBLIGATORY);
+		addEEnumLiteral(statusCodeEEnum, StatusCode.SELECTABLE_A);
+		addEEnumLiteral(statusCodeEEnum, StatusCode.SELECTABLE_B);
+		addEEnumLiteral(statusCodeEEnum, StatusCode.OPTIONAL);
+
 		initEEnum(levelCodeEEnum, LevelCode.class, "LevelCode");
 		addEEnumLiteral(levelCodeEEnum, LevelCode.EXPHIL);
 		addEEnumLiteral(levelCodeEEnum, LevelCode.ONE);
 		addEEnumLiteral(levelCodeEEnum, LevelCode.TWO);
 		addEEnumLiteral(levelCodeEEnum, LevelCode.THREE);
 		addEEnumLiteral(levelCodeEEnum, LevelCode.HIGH);
-
-		initEEnum(statusCodeEEnum, StatusCode.class, "StatusCode");
-		addEEnumLiteral(statusCodeEEnum, StatusCode.OBLIGATORY);
-		addEEnumLiteral(statusCodeEEnum, StatusCode.SELECTABLE_A);
-		addEEnumLiteral(statusCodeEEnum, StatusCode.SELECTABLE_B);
-		addEEnumLiteral(statusCodeEEnum, StatusCode.OPTIONAL);
 
 		// Initialize data types
 		initEDataType(courseCodeEDataType, String.class, "CourseCode", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -661,6 +777,8 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
+		// http://www.eclipse.org/acceleo/query/1.0
+		create_1Annotations();
 		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
 		createExtendedMetaDataAnnotations();
 	}
@@ -674,6 +792,20 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	protected void createEcoreAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation(this, source, new String[] { "validationDelegates", "http://www.eclipse.org/acceleo/query/1.0" });
+		addAnnotation(programmeEClass, source, new String[] { "constraints", "equalLengths" });
+		addAnnotation(yearEClass, source, new String[] { "constraints", "fullCredits" });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/acceleo/query/1.0</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void create_1Annotations() {
+		String source = "http://www.eclipse.org/acceleo/query/1.0";
+		addAnnotation(yearEClass, source,
+				new String[] { "fullCredits", "self.semesters.slots.maxCredits->sum() >= 60" });
 	}
 
 	/**

@@ -49,6 +49,15 @@ public interface EMFCoursesFactory extends EFactory {
 	Programme createProgramme();
 
 	/**
+	 * Returns a new object of class '<em>Year</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Year</em>'.
+	 * @generated
+	 */
+	Year createYear();
+
+	/**
 	 * Returns a new object of class '<em>Semester</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,15 +74,6 @@ public interface EMFCoursesFactory extends EFactory {
 	 * @generated
 	 */
 	SelectionSlot createSelectionSlot();
-
-	/**
-	 * Returns a new object of class '<em>Constraint Slot</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constraint Slot</em>'.
-	 * @generated
-	 */
-	ConstraintSlot createConstraintSlot();
 
 	/**
 	 * Returns the package supported by this factory.

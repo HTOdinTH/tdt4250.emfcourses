@@ -87,6 +87,13 @@ public class EMFCoursesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case EMFCoursesPackage.YEAR: {
+			Year year = (Year) theEObject;
+			T result = caseYear(year);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case EMFCoursesPackage.SEMESTER: {
 			Semester semester = (Semester) theEObject;
 			T result = caseSemester(semester);
@@ -166,6 +173,21 @@ public class EMFCoursesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProgramme(Programme object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Year</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Year</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYear(Year object) {
 		return null;
 	}
 

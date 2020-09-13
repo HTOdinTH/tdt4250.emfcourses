@@ -3,10 +3,10 @@
 package eMFCourses.impl;
 
 import eMFCourses.EMFCoursesPackage;
-import eMFCourses.Programme;
 import eMFCourses.Semester;
 import eMFCourses.Slot;
 
+import eMFCourses.Year;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,11 +32,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.impl.SemesterImpl#getProgramme <em>Programme</em>}</li>
  *   <li>{@link eMFCourses.impl.SemesterImpl#getSlots <em>Slots</em>}</li>
- *   <li>{@link eMFCourses.impl.SemesterImpl#getNextSemesterOptions <em>Next Semester Options</em>}</li>
- *   <li>{@link eMFCourses.impl.SemesterImpl#getPreviousSemester <em>Previous Semester</em>}</li>
  *   <li>{@link eMFCourses.impl.SemesterImpl#getSpecialization <em>Specialization</em>}</li>
+ *   <li>{@link eMFCourses.impl.SemesterImpl#getMaxCredits <em>Max Credits</em>}</li>
+ *   <li>{@link eMFCourses.impl.SemesterImpl#getYear <em>Year</em>}</li>
+ *   <li>{@link eMFCourses.impl.SemesterImpl#getSeason <em>Season</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,16 +51,6 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @ordered
 	 */
 	protected EList<Slot> slots;
-
-	/**
-	 * The cached value of the '{@link #getNextSemesterOptions() <em>Next Semester Options</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextSemesterOptions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Semester> nextSemesterOptions;
 
 	/**
 	 * The default value of the '{@link #getSpecialization() <em>Specialization</em>}' attribute.
@@ -81,6 +71,26 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @ordered
 	 */
 	protected String specialization = SPECIALIZATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMaxCredits() <em>Max Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxCredits()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float MAX_CREDITS_EDEFAULT = 0.0F;
+
+	/**
+	 * The default value of the '{@link #getSeason() <em>Season</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSeason()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SEASON_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,122 +117,12 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @generated
 	 */
 	@Override
-	public Programme getProgramme() {
-		if (eContainerFeatureID() != EMFCoursesPackage.SEMESTER__PROGRAMME)
-			return null;
-		return (Programme) eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetProgramme(Programme newProgramme, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject) newProgramme, EMFCoursesPackage.SEMESTER__PROGRAMME, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setProgramme(Programme newProgramme) {
-		if (newProgramme != eInternalContainer()
-				|| (eContainerFeatureID() != EMFCoursesPackage.SEMESTER__PROGRAMME && newProgramme != null)) {
-			if (EcoreUtil.isAncestor(this, newProgramme))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newProgramme != null)
-				msgs = ((InternalEObject) newProgramme).eInverseAdd(this, EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS,
-						Programme.class, msgs);
-			msgs = basicSetProgramme(newProgramme, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.SEMESTER__PROGRAMME, newProgramme,
-					newProgramme));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EList<Slot> getSlots() {
 		if (slots == null) {
 			slots = new EObjectContainmentWithInverseEList<Slot>(Slot.class, this, EMFCoursesPackage.SEMESTER__SLOTS,
 					EMFCoursesPackage.SLOT__SEMESTER);
 		}
 		return slots;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Semester> getNextSemesterOptions() {
-		if (nextSemesterOptions == null) {
-			nextSemesterOptions = new EObjectContainmentWithInverseEList<Semester>(Semester.class, this,
-					EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS, EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER);
-		}
-		return nextSemesterOptions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Semester getPreviousSemester() {
-		if (eContainerFeatureID() != EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER)
-			return null;
-		return (Semester) eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPreviousSemester(Semester newPreviousSemester, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject) newPreviousSemester, EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER,
-				msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPreviousSemester(Semester newPreviousSemester) {
-		if (newPreviousSemester != eInternalContainer()
-				|| (eContainerFeatureID() != EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER
-						&& newPreviousSemester != null)) {
-			if (EcoreUtil.isAncestor(this, newPreviousSemester))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newPreviousSemester != null)
-				msgs = ((InternalEObject) newPreviousSemester).eInverseAdd(this,
-						EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS, Semester.class, msgs);
-			msgs = basicSetPreviousSemester(newPreviousSemester, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER,
-					newPreviousSemester, newPreviousSemester));
 	}
 
 	/**
@@ -252,25 +152,88 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public float getMaxCredits() {
+		float a = 0.0f;
+		for (Slot s : this.getSlots()) {
+			a += s.getMaxCredits();
+		}
+		return a;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Year getYear() {
+		if (eContainerFeatureID() != EMFCoursesPackage.SEMESTER__YEAR)
+			return null;
+		return (Year) eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetYear(Year newYear, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newYear, EMFCoursesPackage.SEMESTER__YEAR, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setYear(Year newYear) {
+		if (newYear != eInternalContainer()
+				|| (eContainerFeatureID() != EMFCoursesPackage.SEMESTER__YEAR && newYear != null)) {
+			if (EcoreUtil.isAncestor(this, newYear))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newYear != null)
+				msgs = ((InternalEObject) newYear).eInverseAdd(this, EMFCoursesPackage.YEAR__SEMESTERS, Year.class,
+						msgs);
+			msgs = basicSetYear(newYear, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.SEMESTER__YEAR, newYear, newYear));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getSeason() {
+		return this.getYear().getSemesters().indexOf(this) == 0 ? "Fall" : "Spring"; 
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__PROGRAMME:
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			return basicSetProgramme((Programme) otherEnd, msgs);
 		case EMFCoursesPackage.SEMESTER__SLOTS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSlots()).basicAdd(otherEnd, msgs);
-		case EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getNextSemesterOptions()).basicAdd(otherEnd,
-					msgs);
-		case EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER:
+		case EMFCoursesPackage.SEMESTER__YEAR:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			return basicSetPreviousSemester((Semester) otherEnd, msgs);
+			return basicSetYear((Year) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -283,14 +246,10 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__PROGRAMME:
-			return basicSetProgramme(null, msgs);
 		case EMFCoursesPackage.SEMESTER__SLOTS:
 			return ((InternalEList<?>) getSlots()).basicRemove(otherEnd, msgs);
-		case EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS:
-			return ((InternalEList<?>) getNextSemesterOptions()).basicRemove(otherEnd, msgs);
-		case EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER:
-			return basicSetPreviousSemester(null, msgs);
+		case EMFCoursesPackage.SEMESTER__YEAR:
+			return basicSetYear(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -303,12 +262,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-		case EMFCoursesPackage.SEMESTER__PROGRAMME:
-			return eInternalContainer().eInverseRemove(this, EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS,
-					Programme.class, msgs);
-		case EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER:
-			return eInternalContainer().eInverseRemove(this, EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS,
-					Semester.class, msgs);
+		case EMFCoursesPackage.SEMESTER__YEAR:
+			return eInternalContainer().eInverseRemove(this, EMFCoursesPackage.YEAR__SEMESTERS, Year.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -321,16 +276,16 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__PROGRAMME:
-			return getProgramme();
 		case EMFCoursesPackage.SEMESTER__SLOTS:
 			return getSlots();
-		case EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS:
-			return getNextSemesterOptions();
-		case EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER:
-			return getPreviousSemester();
 		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
 			return getSpecialization();
+		case EMFCoursesPackage.SEMESTER__MAX_CREDITS:
+			return getMaxCredits();
+		case EMFCoursesPackage.SEMESTER__YEAR:
+			return getYear();
+		case EMFCoursesPackage.SEMESTER__SEASON:
+			return getSeason();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -344,22 +299,15 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__PROGRAMME:
-			setProgramme((Programme) newValue);
-			return;
 		case EMFCoursesPackage.SEMESTER__SLOTS:
 			getSlots().clear();
 			getSlots().addAll((Collection<? extends Slot>) newValue);
 			return;
-		case EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS:
-			getNextSemesterOptions().clear();
-			getNextSemesterOptions().addAll((Collection<? extends Semester>) newValue);
-			return;
-		case EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER:
-			setPreviousSemester((Semester) newValue);
-			return;
 		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
 			setSpecialization((String) newValue);
+			return;
+		case EMFCoursesPackage.SEMESTER__YEAR:
+			setYear((Year) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -373,20 +321,14 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__PROGRAMME:
-			setProgramme((Programme) null);
-			return;
 		case EMFCoursesPackage.SEMESTER__SLOTS:
 			getSlots().clear();
 			return;
-		case EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS:
-			getNextSemesterOptions().clear();
-			return;
-		case EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER:
-			setPreviousSemester((Semester) null);
-			return;
 		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
 			setSpecialization(SPECIALIZATION_EDEFAULT);
+			return;
+		case EMFCoursesPackage.SEMESTER__YEAR:
+			setYear((Year) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -400,17 +342,17 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__PROGRAMME:
-			return getProgramme() != null;
 		case EMFCoursesPackage.SEMESTER__SLOTS:
 			return slots != null && !slots.isEmpty();
-		case EMFCoursesPackage.SEMESTER__NEXT_SEMESTER_OPTIONS:
-			return nextSemesterOptions != null && !nextSemesterOptions.isEmpty();
-		case EMFCoursesPackage.SEMESTER__PREVIOUS_SEMESTER:
-			return getPreviousSemester() != null;
 		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
 			return SPECIALIZATION_EDEFAULT == null ? specialization != null
 					: !SPECIALIZATION_EDEFAULT.equals(specialization);
+		case EMFCoursesPackage.SEMESTER__MAX_CREDITS:
+			return getMaxCredits() != MAX_CREDITS_EDEFAULT;
+		case EMFCoursesPackage.SEMESTER__YEAR:
+			return getYear() != null;
+		case EMFCoursesPackage.SEMESTER__SEASON:
+			return SEASON_EDEFAULT == null ? getSeason() != null : !SEASON_EDEFAULT.equals(getSeason());
 		}
 		return super.eIsSet(featureID);
 	}

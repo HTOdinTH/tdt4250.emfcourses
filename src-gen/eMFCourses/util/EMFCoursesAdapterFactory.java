@@ -82,6 +82,11 @@ public class EMFCoursesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseYear(Year object) {
+			return createYearAdapter();
+		}
+
+		@Override
 		public Adapter caseSemester(Semester object) {
 			return createSemesterAdapter();
 		}
@@ -159,6 +164,20 @@ public class EMFCoursesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProgrammeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link eMFCourses.Year <em>Year</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see eMFCourses.Year
+	 * @generated
+	 */
+	public Adapter createYearAdapter() {
 		return null;
 	}
 

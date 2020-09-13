@@ -9,7 +9,7 @@ package eMFCourses;
  *
  *
  * @see eMFCourses.EMFCoursesPackage#getConstraintSlot()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ConstraintSlot extends Slot {

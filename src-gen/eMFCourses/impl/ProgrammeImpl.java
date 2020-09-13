@@ -4,8 +4,7 @@ package eMFCourses.impl;
 
 import eMFCourses.EMFCoursesPackage;
 import eMFCourses.Programme;
-import eMFCourses.Semester;
-
+import eMFCourses.Year;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -30,23 +29,25 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.impl.ProgrammeImpl#getRootSemesters <em>Root Semesters</em>}</li>
+ *   <li>{@link eMFCourses.impl.ProgrammeImpl#getRootYears <em>Root Years</em>}</li>
  *   <li>{@link eMFCourses.impl.ProgrammeImpl#getCode <em>Code</em>}</li>
  *   <li>{@link eMFCourses.impl.ProgrammeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link eMFCourses.impl.ProgrammeImpl#getLength <em>Length</em>}</li>
+ *   <li>{@link eMFCourses.impl.ProgrammeImpl#getTotalCredits <em>Total Credits</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Programme {
 	/**
-	 * The cached value of the '{@link #getRootSemesters() <em>Root Semesters</em>}' containment reference list.
+	 * The cached value of the '{@link #getRootYears() <em>Root Years</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRootSemesters()
+	 * @see #getRootYears()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Semester> rootSemesters;
+	protected EList<Year> rootYears;
 
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -89,6 +90,26 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LENGTH_EDEFAULT = 0;
+
+	/**
+	 * The default value of the '{@link #getTotalCredits() <em>Total Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotalCredits()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float TOTAL_CREDITS_EDEFAULT = 0.0F;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -113,12 +134,12 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	 * @generated
 	 */
 	@Override
-	public EList<Semester> getRootSemesters() {
-		if (rootSemesters == null) {
-			rootSemesters = new EObjectContainmentWithInverseEList<Semester>(Semester.class, this,
-					EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS, EMFCoursesPackage.SEMESTER__PROGRAMME);
+	public EList<Year> getRootYears() {
+		if (rootYears == null) {
+			rootYears = new EObjectContainmentWithInverseEList<Year>(Year.class, this,
+					EMFCoursesPackage.PROGRAMME__ROOT_YEARS, EMFCoursesPackage.YEAR__PROGRAMME);
 		}
-		return rootSemesters;
+		return rootYears;
 	}
 
 	/**
@@ -170,14 +191,40 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public int getLength() {
+		int count = 1;
+		Year year = this.getRootYears().get(0);
+		while (year.getNextYearOptions().size() > 0) {
+			count++;
+			year = year.getNextYearOptions().get(0);
+		}
+		return count;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public float getTotalCredits() {
+		return (float) this.getLength() * 60f;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRootSemesters()).basicAdd(otherEnd, msgs);
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRootYears()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -190,8 +237,8 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS:
-			return ((InternalEList<?>) getRootSemesters()).basicRemove(otherEnd, msgs);
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			return ((InternalEList<?>) getRootYears()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -204,12 +251,16 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS:
-			return getRootSemesters();
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			return getRootYears();
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			return getCode();
 		case EMFCoursesPackage.PROGRAMME__NAME:
 			return getName();
+		case EMFCoursesPackage.PROGRAMME__LENGTH:
+			return getLength();
+		case EMFCoursesPackage.PROGRAMME__TOTAL_CREDITS:
+			return getTotalCredits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -223,9 +274,9 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS:
-			getRootSemesters().clear();
-			getRootSemesters().addAll((Collection<? extends Semester>) newValue);
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			getRootYears().clear();
+			getRootYears().addAll((Collection<? extends Year>) newValue);
 			return;
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			setCode((String) newValue);
@@ -245,8 +296,8 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS:
-			getRootSemesters().clear();
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			getRootYears().clear();
 			return;
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			setCode(CODE_EDEFAULT);
@@ -266,12 +317,16 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_SEMESTERS:
-			return rootSemesters != null && !rootSemesters.isEmpty();
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			return rootYears != null && !rootYears.isEmpty();
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case EMFCoursesPackage.PROGRAMME__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case EMFCoursesPackage.PROGRAMME__LENGTH:
+			return getLength() != LENGTH_EDEFAULT;
+		case EMFCoursesPackage.PROGRAMME__TOTAL_CREDITS:
+			return getTotalCredits() != TOTAL_CREDITS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -181,13 +181,13 @@ public interface EMFCoursesPackage extends EPackage {
 	int PROGRAMME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Root Semesters</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Root Years</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMME__ROOT_SEMESTERS = 0;
+	int PROGRAMME__ROOT_YEARS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -208,13 +208,31 @@ public interface EMFCoursesPackage extends EPackage {
 	int PROGRAMME__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMME__LENGTH = 3;
+
+	/**
+	 * The feature id for the '<em><b>Total Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMME__TOTAL_CREDITS = 4;
+
+	/**
 	 * The number of structural features of the '<em>Programme</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMME_FEATURE_COUNT = 3;
+	int PROGRAMME_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Programme</em>' class.
@@ -226,14 +244,14 @@ public interface EMFCoursesPackage extends EPackage {
 	int PROGRAMME_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link eMFCourses.impl.SemesterImpl <em>Semester</em>}' class.
+	 * The meta object id for the '{@link eMFCourses.impl.YearImpl <em>Year</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see eMFCourses.impl.SemesterImpl
-	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getSemester()
+	 * @see eMFCourses.impl.YearImpl
+	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getYear()
 	 * @generated
 	 */
-	int SEMESTER = 3;
+	int YEAR = 3;
 
 	/**
 	 * The feature id for the '<em><b>Programme</b></em>' container reference.
@@ -242,7 +260,71 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__PROGRAMME = 0;
+	int YEAR__PROGRAMME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Semesters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEAR__SEMESTERS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Next Year Options</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEAR__NEXT_YEAR_OPTIONS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Previous Year</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEAR__PREVIOUS_YEAR = 3;
+
+	/**
+	 * The feature id for the '<em><b>Total Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEAR__TOTAL_CREDITS = 4;
+
+	/**
+	 * The number of structural features of the '<em>Year</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEAR_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Year</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEAR_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link eMFCourses.impl.SemesterImpl <em>Semester</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see eMFCourses.impl.SemesterImpl
+	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getSemester()
+	 * @generated
+	 */
+	int SEMESTER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Slots</b></em>' containment reference list.
@@ -251,25 +333,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__SLOTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Next Semester Options</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER__NEXT_SEMESTER_OPTIONS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Previous Semester</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER__PREVIOUS_SEMESTER = 3;
+	int SEMESTER__SLOTS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Specialization</b></em>' attribute.
@@ -278,7 +342,34 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__SPECIALIZATION = 4;
+	int SEMESTER__SPECIALIZATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__MAX_CREDITS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Year</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__YEAR = 3;
+
+	/**
+	 * The feature id for the '<em><b>Season</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__SEASON = 4;
 
 	/**
 	 * The number of structural features of the '<em>Semester</em>' class.
@@ -306,7 +397,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getSlot()
 	 * @generated
 	 */
-	int SLOT = 4;
+	int SLOT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
@@ -370,7 +461,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getSelectionSlot()
 	 * @generated
 	 */
-	int SELECTION_SLOT = 5;
+	int SELECTION_SLOT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
@@ -443,7 +534,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getConstraintSlot()
 	 * @generated
 	 */
-	int CONSTRAINT_SLOT = 6;
+	int CONSTRAINT_SLOT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
@@ -507,7 +598,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getLevelCode()
 	 * @generated
 	 */
-	int LEVEL_CODE = 7;
+	int LEVEL_CODE = 9;
 
 	/**
 	 * The meta object id for the '{@link eMFCourses.StatusCode <em>Status Code</em>}' enum.
@@ -527,7 +618,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getCourseCode()
 	 * @generated
 	 */
-	int COURSE_CODE = 9;
+	int COURSE_CODE = 10;
 
 	/**
 	 * Returns the meta object for class '{@link eMFCourses.Listing <em>Listing</em>}'.
@@ -626,15 +717,15 @@ public interface EMFCoursesPackage extends EPackage {
 	EClass getProgramme();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eMFCourses.Programme#getRootSemesters <em>Root Semesters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link eMFCourses.Programme#getRootYears <em>Root Years</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Root Semesters</em>'.
-	 * @see eMFCourses.Programme#getRootSemesters()
+	 * @return the meta object for the containment reference list '<em>Root Years</em>'.
+	 * @see eMFCourses.Programme#getRootYears()
 	 * @see #getProgramme()
 	 * @generated
 	 */
-	EReference getProgramme_RootSemesters();
+	EReference getProgramme_RootYears();
 
 	/**
 	 * Returns the meta object for the attribute '{@link eMFCourses.Programme#getCode <em>Code</em>}'.
@@ -659,6 +750,93 @@ public interface EMFCoursesPackage extends EPackage {
 	EAttribute getProgramme_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eMFCourses.Programme#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see eMFCourses.Programme#getLength()
+	 * @see #getProgramme()
+	 * @generated
+	 */
+	EAttribute getProgramme_Length();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eMFCourses.Programme#getTotalCredits <em>Total Credits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Credits</em>'.
+	 * @see eMFCourses.Programme#getTotalCredits()
+	 * @see #getProgramme()
+	 * @generated
+	 */
+	EAttribute getProgramme_TotalCredits();
+
+	/**
+	 * Returns the meta object for class '{@link eMFCourses.Year <em>Year</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Year</em>'.
+	 * @see eMFCourses.Year
+	 * @generated
+	 */
+	EClass getYear();
+
+	/**
+	 * Returns the meta object for the container reference '{@link eMFCourses.Year#getProgramme <em>Programme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Programme</em>'.
+	 * @see eMFCourses.Year#getProgramme()
+	 * @see #getYear()
+	 * @generated
+	 */
+	EReference getYear_Programme();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link eMFCourses.Year#getSemesters <em>Semesters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Semesters</em>'.
+	 * @see eMFCourses.Year#getSemesters()
+	 * @see #getYear()
+	 * @generated
+	 */
+	EReference getYear_Semesters();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link eMFCourses.Year#getNextYearOptions <em>Next Year Options</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Next Year Options</em>'.
+	 * @see eMFCourses.Year#getNextYearOptions()
+	 * @see #getYear()
+	 * @generated
+	 */
+	EReference getYear_NextYearOptions();
+
+	/**
+	 * Returns the meta object for the container reference '{@link eMFCourses.Year#getPreviousYear <em>Previous Year</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Previous Year</em>'.
+	 * @see eMFCourses.Year#getPreviousYear()
+	 * @see #getYear()
+	 * @generated
+	 */
+	EReference getYear_PreviousYear();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eMFCourses.Year#getTotalCredits <em>Total Credits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Credits</em>'.
+	 * @see eMFCourses.Year#getTotalCredits()
+	 * @see #getYear()
+	 * @generated
+	 */
+	EAttribute getYear_TotalCredits();
+
+	/**
 	 * Returns the meta object for class '{@link eMFCourses.Semester <em>Semester</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -667,17 +845,6 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSemester();
-
-	/**
-	 * Returns the meta object for the container reference '{@link eMFCourses.Semester#getProgramme <em>Programme</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Programme</em>'.
-	 * @see eMFCourses.Semester#getProgramme()
-	 * @see #getSemester()
-	 * @generated
-	 */
-	EReference getSemester_Programme();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link eMFCourses.Semester#getSlots <em>Slots</em>}'.
@@ -691,28 +858,6 @@ public interface EMFCoursesPackage extends EPackage {
 	EReference getSemester_Slots();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eMFCourses.Semester#getNextSemesterOptions <em>Next Semester Options</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Next Semester Options</em>'.
-	 * @see eMFCourses.Semester#getNextSemesterOptions()
-	 * @see #getSemester()
-	 * @generated
-	 */
-	EReference getSemester_NextSemesterOptions();
-
-	/**
-	 * Returns the meta object for the container reference '{@link eMFCourses.Semester#getPreviousSemester <em>Previous Semester</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Previous Semester</em>'.
-	 * @see eMFCourses.Semester#getPreviousSemester()
-	 * @see #getSemester()
-	 * @generated
-	 */
-	EReference getSemester_PreviousSemester();
-
-	/**
 	 * Returns the meta object for the attribute '{@link eMFCourses.Semester#getSpecialization <em>Specialization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -722,6 +867,39 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSemester_Specialization();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eMFCourses.Semester#getMaxCredits <em>Max Credits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Credits</em>'.
+	 * @see eMFCourses.Semester#getMaxCredits()
+	 * @see #getSemester()
+	 * @generated
+	 */
+	EAttribute getSemester_MaxCredits();
+
+	/**
+	 * Returns the meta object for the container reference '{@link eMFCourses.Semester#getYear <em>Year</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Year</em>'.
+	 * @see eMFCourses.Semester#getYear()
+	 * @see #getSemester()
+	 * @generated
+	 */
+	EReference getSemester_Year();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eMFCourses.Semester#getSeason <em>Season</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Season</em>'.
+	 * @see eMFCourses.Semester#getSeason()
+	 * @see #getSemester()
+	 * @generated
+	 */
+	EAttribute getSemester_Season();
 
 	/**
 	 * Returns the meta object for class '{@link eMFCourses.Slot <em>Slot</em>}'.
@@ -941,12 +1119,12 @@ public interface EMFCoursesPackage extends EPackage {
 		EClass PROGRAMME = eINSTANCE.getProgramme();
 
 		/**
-		 * The meta object literal for the '<em><b>Root Semesters</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Root Years</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROGRAMME__ROOT_SEMESTERS = eINSTANCE.getProgramme_RootSemesters();
+		EReference PROGRAMME__ROOT_YEARS = eINSTANCE.getProgramme_RootYears();
 
 		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
@@ -965,6 +1143,72 @@ public interface EMFCoursesPackage extends EPackage {
 		EAttribute PROGRAMME__NAME = eINSTANCE.getProgramme_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROGRAMME__LENGTH = eINSTANCE.getProgramme_Length();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Credits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROGRAMME__TOTAL_CREDITS = eINSTANCE.getProgramme_TotalCredits();
+
+		/**
+		 * The meta object literal for the '{@link eMFCourses.impl.YearImpl <em>Year</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see eMFCourses.impl.YearImpl
+		 * @see eMFCourses.impl.EMFCoursesPackageImpl#getYear()
+		 * @generated
+		 */
+		EClass YEAR = eINSTANCE.getYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Programme</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YEAR__PROGRAMME = eINSTANCE.getYear_Programme();
+
+		/**
+		 * The meta object literal for the '<em><b>Semesters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YEAR__SEMESTERS = eINSTANCE.getYear_Semesters();
+
+		/**
+		 * The meta object literal for the '<em><b>Next Year Options</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YEAR__NEXT_YEAR_OPTIONS = eINSTANCE.getYear_NextYearOptions();
+
+		/**
+		 * The meta object literal for the '<em><b>Previous Year</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YEAR__PREVIOUS_YEAR = eINSTANCE.getYear_PreviousYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Credits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEAR__TOTAL_CREDITS = eINSTANCE.getYear_TotalCredits();
+
+		/**
 		 * The meta object literal for the '{@link eMFCourses.impl.SemesterImpl <em>Semester</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -975,14 +1219,6 @@ public interface EMFCoursesPackage extends EPackage {
 		EClass SEMESTER = eINSTANCE.getSemester();
 
 		/**
-		 * The meta object literal for the '<em><b>Programme</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEMESTER__PROGRAMME = eINSTANCE.getSemester_Programme();
-
-		/**
 		 * The meta object literal for the '<em><b>Slots</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -991,28 +1227,36 @@ public interface EMFCoursesPackage extends EPackage {
 		EReference SEMESTER__SLOTS = eINSTANCE.getSemester_Slots();
 
 		/**
-		 * The meta object literal for the '<em><b>Next Semester Options</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEMESTER__NEXT_SEMESTER_OPTIONS = eINSTANCE.getSemester_NextSemesterOptions();
-
-		/**
-		 * The meta object literal for the '<em><b>Previous Semester</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEMESTER__PREVIOUS_SEMESTER = eINSTANCE.getSemester_PreviousSemester();
-
-		/**
 		 * The meta object literal for the '<em><b>Specialization</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute SEMESTER__SPECIALIZATION = eINSTANCE.getSemester_Specialization();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Credits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMESTER__MAX_CREDITS = eINSTANCE.getSemester_MaxCredits();
+
+		/**
+		 * The meta object literal for the '<em><b>Year</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEMESTER__YEAR = eINSTANCE.getSemester_Year();
+
+		/**
+		 * The meta object literal for the '<em><b>Season</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMESTER__SEASON = eINSTANCE.getSemester_Season();
 
 		/**
 		 * The meta object literal for the '{@link eMFCourses.Slot <em>Slot</em>}' class.

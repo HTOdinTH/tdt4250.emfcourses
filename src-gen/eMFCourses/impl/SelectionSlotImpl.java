@@ -223,13 +223,11 @@ public class SelectionSlotImpl extends MinimalEObjectImpl.Container implements S
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean validChoice(Course course) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.getOptions().contains(course);
 	}
 
 	/**

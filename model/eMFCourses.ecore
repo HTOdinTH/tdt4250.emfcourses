@@ -21,40 +21,47 @@
         defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Programme">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rootSemesters" lowerBound="1"
-        upperBound="-1" eType="#//Semester" containment="true" eOpposite="#//Semester/programme"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="equalLengths"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootYears" lowerBound="1"
+        upperBound="-1" eType="#//Year" containment="true" eOpposite="#//Year/programme"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        volatile="true" transient="true" derived="true"/>
+        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        volatile="true" transient="true" derived="true"/>
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Year">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="fullCredits"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
+      <details key="fullCredits" value="self.semesters.slots.maxCredits->sum() >= 60"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
+        eOpposite="#//Programme/rootYears"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semesters" lowerBound="2"
+        upperBound="2" eType="#//Semester" containment="true" eOpposite="#//Semester/year"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextYearOptions" upperBound="-1"
+        eType="#//Year" containment="true" eOpposite="#//Year/previousYear"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousYear" eType="#//Year"
+        eOpposite="#//Year/nextYearOptions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
-        eOpposite="#//Programme/rootSemesters"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="slots" upperBound="-1"
         eType="#//Slot" containment="true" eOpposite="#//Slot/semester"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextSemesterOptions" upperBound="-1"
-        eType="#//Semester" containment="true" eOpposite="#//Semester/previousSemester"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="previousSemester" eType="#//Semester"
-        eOpposite="#//Semester/nextSemesterOptions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Specialization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        volatile="true" transient="true" derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String">
-    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="pattern" value="\p{L}+\d+"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="LevelCode" instanceClassName="java.lang.Char">
-    <eLiterals name="EXPHIL" literal="X"/>
-    <eLiterals name="ONE" value="1" literal="1"/>
-    <eLiterals name="TWO" value="2" literal="2"/>
-    <eLiterals name="THREE" value="3" literal="3"/>
-    <eLiterals name="HIGH" value="4" literal="H"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="year" lowerBound="1" eType="#//Year"
+        eOpposite="#//Year/semesters"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Season" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Slot" abstract="true" interface="true">
     <eOperations name="validChoice" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -71,11 +78,23 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//Course"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConstraintSlot" eSuperTypes="#//Slot"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintSlot" abstract="true" eSuperTypes="#//Slot"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="pattern" value="\p{L}+\d+"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="StatusCode" instanceClassName="java.lang.String">
     <eLiterals name="OBLIGATORY" literal="O"/>
     <eLiterals name="SELECTABLE_A" value="1" literal="VA"/>
     <eLiterals name="SELECTABLE_B" value="2" literal="VB"/>
     <eLiterals name="OPTIONAL" value="3" literal="V"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LevelCode" instanceClassName="java.lang.Char">
+    <eLiterals name="EXPHIL" literal="X"/>
+    <eLiterals name="ONE" value="1" literal="1"/>
+    <eLiterals name="TWO" value="2" literal="2"/>
+    <eLiterals name="THREE" value="3" literal="3"/>
+    <eLiterals name="HIGH" value="4" literal="H"/>
   </eClassifiers>
 </ecore:EPackage>

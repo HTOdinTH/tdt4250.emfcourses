@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class ConstraintSlotImpl extends MinimalEObjectImpl.Container implements ConstraintSlot {
+public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container implements ConstraintSlot {
 	/**
 	 * The default value of the '{@link #getMaxCredits() <em>Max Credits</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -196,14 +196,10 @@ public class ConstraintSlotImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	public boolean validChoice(Course course) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+	abstract public boolean validChoice(Course course);
 
 	/**
 	 * <!-- begin-user-doc -->
