@@ -29,9 +29,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.impl.ProgrammeImpl#getRootYears <em>Root Years</em>}</li>
  *   <li>{@link eMFCourses.impl.ProgrammeImpl#getCode <em>Code</em>}</li>
  *   <li>{@link eMFCourses.impl.ProgrammeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link eMFCourses.impl.ProgrammeImpl#getRootYears <em>Root Years</em>}</li>
  *   <li>{@link eMFCourses.impl.ProgrammeImpl#getLength <em>Length</em>}</li>
  *   <li>{@link eMFCourses.impl.ProgrammeImpl#getTotalCredits <em>Total Credits</em>}</li>
  * </ul>
@@ -39,16 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Programme {
-	/**
-	 * The cached value of the '{@link #getRootYears() <em>Root Years</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRootYears()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Year> rootYears;
-
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,6 +78,16 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRootYears() <em>Root Years</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRootYears()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Year> rootYears;
 
 	/**
 	 * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
@@ -251,12 +251,12 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
-			return getRootYears();
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			return getCode();
 		case EMFCoursesPackage.PROGRAMME__NAME:
 			return getName();
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			return getRootYears();
 		case EMFCoursesPackage.PROGRAMME__LENGTH:
 			return getLength();
 		case EMFCoursesPackage.PROGRAMME__TOTAL_CREDITS:
@@ -274,15 +274,15 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
-			getRootYears().clear();
-			getRootYears().addAll((Collection<? extends Year>) newValue);
-			return;
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			setCode((String) newValue);
 			return;
 		case EMFCoursesPackage.PROGRAMME__NAME:
 			setName((String) newValue);
+			return;
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			getRootYears().clear();
+			getRootYears().addAll((Collection<? extends Year>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -296,14 +296,14 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
-			getRootYears().clear();
-			return;
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
 		case EMFCoursesPackage.PROGRAMME__NAME:
 			setName(NAME_EDEFAULT);
+			return;
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			getRootYears().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -317,12 +317,12 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
-			return rootYears != null && !rootYears.isEmpty();
 		case EMFCoursesPackage.PROGRAMME__CODE:
 			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case EMFCoursesPackage.PROGRAMME__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case EMFCoursesPackage.PROGRAMME__ROOT_YEARS:
+			return rootYears != null && !rootYears.isEmpty();
 		case EMFCoursesPackage.PROGRAMME__LENGTH:
 			return getLength() != LENGTH_EDEFAULT;
 		case EMFCoursesPackage.PROGRAMME__TOTAL_CREDITS:

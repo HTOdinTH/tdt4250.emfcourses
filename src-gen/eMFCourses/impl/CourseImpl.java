@@ -31,16 +31,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CODE_EDEFAULT = null;
-
-	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -48,7 +38,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 * @ordered
 	 */
-	protected String code = CODE_EDEFAULT;
+	protected Object code;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -91,16 +81,6 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	protected float credits = CREDITS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final LevelCode LEVEL_EDEFAULT = LevelCode.ONE;
-
-	/**
 	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,7 +88,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 * @ordered
 	 */
-	protected LevelCode level = LEVEL_EDEFAULT;
+	protected LevelCode level;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,7 +115,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 */
 	@Override
-	public String getCode() {
+	public Object getCode() {
 		return code;
 	}
 
@@ -145,8 +125,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 */
 	@Override
-	public void setCode(String newCode) {
-		String oldCode = code;
+	public void setCode(Object newCode) {
+		Object oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.COURSE__CODE, oldCode, code));
@@ -217,7 +197,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	@Override
 	public void setLevel(LevelCode newLevel) {
 		LevelCode oldLevel = level;
-		level = newLevel == null ? LEVEL_EDEFAULT : newLevel;
+		level = newLevel == null ? null : newLevel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.COURSE__LEVEL, oldLevel, level));
 	}
@@ -251,7 +231,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case EMFCoursesPackage.COURSE__CODE:
-			setCode((String) newValue);
+			setCode(newValue);
 			return;
 		case EMFCoursesPackage.COURSE__NAME:
 			setName((String) newValue);
@@ -260,7 +240,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			setCredits((Float) newValue);
 			return;
 		case EMFCoursesPackage.COURSE__LEVEL:
-			setLevel((LevelCode) newValue);
+			setLevel(newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,7 +255,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case EMFCoursesPackage.COURSE__CODE:
-			setCode(CODE_EDEFAULT);
+			setCode((Object) null);
 			return;
 		case EMFCoursesPackage.COURSE__NAME:
 			setName(NAME_EDEFAULT);
@@ -284,7 +264,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			setCredits(CREDITS_EDEFAULT);
 			return;
 		case EMFCoursesPackage.COURSE__LEVEL:
-			setLevel(LEVEL_EDEFAULT);
+			setLevel((LevelCode) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -299,13 +279,13 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case EMFCoursesPackage.COURSE__CODE:
-			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			return code != null;
 		case EMFCoursesPackage.COURSE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case EMFCoursesPackage.COURSE__CREDITS:
 			return credits != CREDITS_EDEFAULT;
 		case EMFCoursesPackage.COURSE__LEVEL:
-			return level != LEVEL_EDEFAULT;
+			return level != null;
 		}
 		return super.eIsSet(featureID);
 	}

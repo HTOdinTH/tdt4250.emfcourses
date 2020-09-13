@@ -31,14 +31,24 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.impl.ConstraintSlotImpl#getMaxCredits <em>Max Credits</em>}</li>
  *   <li>{@link eMFCourses.impl.ConstraintSlotImpl#getSemester <em>Semester</em>}</li>
  *   <li>{@link eMFCourses.impl.ConstraintSlotImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link eMFCourses.impl.ConstraintSlotImpl#getMaxCredits <em>Max Credits</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container implements ConstraintSlot {
+	/**
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected StatusCode status;
+
 	/**
 	 * The default value of the '{@link #getMaxCredits() <em>Max Credits</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,26 +68,6 @@ public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected float maxCredits = MAX_CREDITS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatus()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final StatusCode STATUS_EDEFAULT = StatusCode.OBLIGATORY;
-
-	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatus()
-	 * @generated
-	 * @ordered
-	 */
-	protected StatusCode status = STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,7 +177,7 @@ public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void setStatus(StatusCode newStatus) {
 		StatusCode oldStatus = status;
-		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
+		status = newStatus == null ? null : newStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.CONSTRAINT_SLOT__STATUS, oldStatus,
 					status));
@@ -253,12 +243,12 @@ public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
-			return getMaxCredits();
 		case EMFCoursesPackage.CONSTRAINT_SLOT__SEMESTER:
 			return getSemester();
 		case EMFCoursesPackage.CONSTRAINT_SLOT__STATUS:
 			return getStatus();
+		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
+			return getMaxCredits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -271,14 +261,14 @@ public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
-			setMaxCredits((Float) newValue);
-			return;
 		case EMFCoursesPackage.CONSTRAINT_SLOT__SEMESTER:
 			setSemester((Semester) newValue);
 			return;
 		case EMFCoursesPackage.CONSTRAINT_SLOT__STATUS:
-			setStatus((StatusCode) newValue);
+			setStatus(newValue);
+			return;
+		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
+			setMaxCredits((Float) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -292,14 +282,14 @@ public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
-			setMaxCredits(MAX_CREDITS_EDEFAULT);
-			return;
 		case EMFCoursesPackage.CONSTRAINT_SLOT__SEMESTER:
 			setSemester((Semester) null);
 			return;
 		case EMFCoursesPackage.CONSTRAINT_SLOT__STATUS:
-			setStatus(STATUS_EDEFAULT);
+			setStatus((StatusCode) null);
+			return;
+		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
+			setMaxCredits(MAX_CREDITS_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -313,12 +303,12 @@ public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
-			return maxCredits != MAX_CREDITS_EDEFAULT;
 		case EMFCoursesPackage.CONSTRAINT_SLOT__SEMESTER:
 			return getSemester() != null;
 		case EMFCoursesPackage.CONSTRAINT_SLOT__STATUS:
-			return status != STATUS_EDEFAULT;
+			return status != null;
+		case EMFCoursesPackage.CONSTRAINT_SLOT__MAX_CREDITS:
+			return maxCredits != MAX_CREDITS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -348,10 +338,10 @@ public abstract class ConstraintSlotImpl extends MinimalEObjectImpl.Container im
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (maxCredits: ");
-		result.append(maxCredits);
-		result.append(", status: ");
+		result.append(" (status: ");
 		result.append(status);
+		result.append(", maxCredits: ");
+		result.append(maxCredits);
 		result.append(')');
 		return result.toString();
 	}

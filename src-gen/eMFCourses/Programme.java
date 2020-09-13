@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.Programme#getRootYears <em>Root Years</em>}</li>
  *   <li>{@link eMFCourses.Programme#getCode <em>Code</em>}</li>
  *   <li>{@link eMFCourses.Programme#getName <em>Name</em>}</li>
+ *   <li>{@link eMFCourses.Programme#getRootYears <em>Root Years</em>}</li>
  *   <li>{@link eMFCourses.Programme#getLength <em>Length</em>}</li>
  *   <li>{@link eMFCourses.Programme#getTotalCredits <em>Total Credits</em>}</li>
  * </ul>

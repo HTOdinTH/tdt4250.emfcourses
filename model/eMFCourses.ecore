@@ -48,10 +48,10 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="previousYear" eType="#//Year"
         eOpposite="#//Year/nextYearOptions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextYearOptions" upperBound="-1"
-        eType="#//Year" containment="true" eOpposite="#//Year/previousYear"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="semesters" lowerBound="2"
         upperBound="2" eType="#//Semester" containment="true" eOpposite="#//Semester/year"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextYearOptions" upperBound="-1"
+        eType="#//Year" containment="true" eOpposite="#//Year/previousYear"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
     <eStructuralFeatures xsi:type="ecore:EReference" name="year" lowerBound="1" eType="#//Year"
@@ -84,13 +84,13 @@
       <details key="pattern" value="\p{L}+\d+"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="StatusCode" instanceClassName="java.lang.String">
+  <eClassifiers xsi:type="ecore:EEnum" name="StatusCode" instanceTypeName="EString">
     <eLiterals name="OBLIGATORY" literal="O"/>
     <eLiterals name="SELECTABLE_A" value="1" literal="VA"/>
     <eLiterals name="SELECTABLE_B" value="2" literal="VB"/>
     <eLiterals name="OPTIONAL" value="3" literal="V"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="LevelCode" instanceClassName="java.lang.Char">
+  <eClassifiers xsi:type="ecore:EEnum" name="LevelCode" instanceTypeName="EChar">
     <eLiterals name="EXPHIL" literal="X"/>
     <eLiterals name="ONE" value="1" literal="1"/>
     <eLiterals name="TWO" value="2" literal="2"/>

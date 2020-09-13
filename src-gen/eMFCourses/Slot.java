@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.Slot#getMaxCredits <em>Max Credits</em>}</li>
  *   <li>{@link eMFCourses.Slot#getSemester <em>Semester</em>}</li>
  *   <li>{@link eMFCourses.Slot#getStatus <em>Status</em>}</li>
+ *   <li>{@link eMFCourses.Slot#getMaxCredits <em>Max Credits</em>}</li>
  * </ul>
  *
  * @see eMFCourses.EMFCoursesPackage#getSlot()

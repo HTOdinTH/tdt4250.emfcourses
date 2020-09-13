@@ -181,22 +181,13 @@ public interface EMFCoursesPackage extends EPackage {
 	int PROGRAMME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Root Years</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME__ROOT_YEARS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMME__CODE = 1;
+	int PROGRAMME__CODE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -205,7 +196,16 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMME__NAME = 2;
+	int PROGRAMME__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Root Years</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMME__ROOT_YEARS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Length</b></em>' attribute.
@@ -263,22 +263,22 @@ public interface EMFCoursesPackage extends EPackage {
 	int YEAR__PROGRAMME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Semesters</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Specialization</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEAR__SEMESTERS = 1;
+	int YEAR__SPECIALIZATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Next Year Options</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Total Credits</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEAR__NEXT_YEAR_OPTIONS = 2;
+	int YEAR__TOTAL_CREDITS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Previous Year</b></em>' container reference.
@@ -290,13 +290,22 @@ public interface EMFCoursesPackage extends EPackage {
 	int YEAR__PREVIOUS_YEAR = 3;
 
 	/**
-	 * The feature id for the '<em><b>Total Credits</b></em>' attribute.
+	 * The feature id for the '<em><b>Semesters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEAR__TOTAL_CREDITS = 4;
+	int YEAR__SEMESTERS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Next Year Options</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEAR__NEXT_YEAR_OPTIONS = 5;
 
 	/**
 	 * The number of structural features of the '<em>Year</em>' class.
@@ -305,7 +314,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEAR_FEATURE_COUNT = 5;
+	int YEAR_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Year</em>' class.
@@ -327,22 +336,22 @@ public interface EMFCoursesPackage extends EPackage {
 	int SEMESTER = 4;
 
 	/**
+	 * The feature id for the '<em><b>Year</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__YEAR = 0;
+
+	/**
 	 * The feature id for the '<em><b>Slots</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__SLOTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Specialization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER__SPECIALIZATION = 1;
+	int SEMESTER__SLOTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
@@ -354,22 +363,13 @@ public interface EMFCoursesPackage extends EPackage {
 	int SEMESTER__MAX_CREDITS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Year</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER__YEAR = 3;
-
-	/**
 	 * The feature id for the '<em><b>Season</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__SEASON = 4;
+	int SEMESTER__SEASON = 3;
 
 	/**
 	 * The number of structural features of the '<em>Semester</em>' class.
@@ -378,7 +378,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER_FEATURE_COUNT = 5;
+	int SEMESTER_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Semester</em>' class.
@@ -400,22 +400,13 @@ public interface EMFCoursesPackage extends EPackage {
 	int SLOT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLOT__MAX_CREDITS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Semester</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLOT__SEMESTER = 1;
+	int SLOT__SEMESTER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -424,7 +415,16 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLOT__STATUS = 2;
+	int SLOT__STATUS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLOT__MAX_CREDITS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Slot</em>' class.
@@ -464,15 +464,6 @@ public interface EMFCoursesPackage extends EPackage {
 	int SELECTION_SLOT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_SLOT__MAX_CREDITS = SLOT__MAX_CREDITS;
-
-	/**
 	 * The feature id for the '<em><b>Semester</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -489,6 +480,15 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @ordered
 	 */
 	int SELECTION_SLOT__STATUS = SLOT__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_SLOT__MAX_CREDITS = SLOT__MAX_CREDITS;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' reference list.
@@ -537,15 +537,6 @@ public interface EMFCoursesPackage extends EPackage {
 	int CONSTRAINT_SLOT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_SLOT__MAX_CREDITS = SLOT__MAX_CREDITS;
-
-	/**
 	 * The feature id for the '<em><b>Semester</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -562,6 +553,15 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONSTRAINT_SLOT__STATUS = SLOT__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Max Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_SLOT__MAX_CREDITS = SLOT__MAX_CREDITS;
 
 	/**
 	 * The number of structural features of the '<em>Constraint Slot</em>' class.
@@ -614,7 +614,7 @@ public interface EMFCoursesPackage extends EPackage {
 	 * The meta object id for the '<em>Course Code</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.lang.String
+	 * @see java.lang.Object
 	 * @see eMFCourses.impl.EMFCoursesPackageImpl#getCourseCode()
 	 * @generated
 	 */
@@ -793,6 +793,17 @@ public interface EMFCoursesPackage extends EPackage {
 	EReference getYear_Programme();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eMFCourses.Year#getSpecialization <em>Specialization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Specialization</em>'.
+	 * @see eMFCourses.Year#getSpecialization()
+	 * @see #getYear()
+	 * @generated
+	 */
+	EAttribute getYear_Specialization();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link eMFCourses.Year#getSemesters <em>Semesters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -856,17 +867,6 @@ public interface EMFCoursesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSemester_Slots();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eMFCourses.Semester#getSpecialization <em>Specialization</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Specialization</em>'.
-	 * @see eMFCourses.Semester#getSpecialization()
-	 * @see #getSemester()
-	 * @generated
-	 */
-	EAttribute getSemester_Specialization();
 
 	/**
 	 * Returns the meta object for the attribute '{@link eMFCourses.Semester#getMaxCredits <em>Max Credits</em>}'.
@@ -1006,12 +1006,12 @@ public interface EMFCoursesPackage extends EPackage {
 	EEnum getStatusCode();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.String <em>Course Code</em>}'.
+	 * Returns the meta object for data type '{@link java.lang.Object <em>Course Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Course Code</em>'.
-	 * @see java.lang.String
-	 * @model instanceClass="java.lang.String"
+	 * @see java.lang.Object
+	 * @model instanceClass="java.lang.Object"
 	 *        extendedMetaData="pattern='\\p{L}+\\d+'"
 	 * @generated
 	 */
@@ -1177,6 +1177,14 @@ public interface EMFCoursesPackage extends EPackage {
 		EReference YEAR__PROGRAMME = eINSTANCE.getYear_Programme();
 
 		/**
+		 * The meta object literal for the '<em><b>Specialization</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEAR__SPECIALIZATION = eINSTANCE.getYear_Specialization();
+
+		/**
 		 * The meta object literal for the '<em><b>Semesters</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1225,14 +1233,6 @@ public interface EMFCoursesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SEMESTER__SLOTS = eINSTANCE.getSemester_Slots();
-
-		/**
-		 * The meta object literal for the '<em><b>Specialization</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SEMESTER__SPECIALIZATION = eINSTANCE.getSemester_Specialization();
 
 		/**
 		 * The meta object literal for the '<em><b>Max Credits</b></em>' attribute feature.
@@ -1352,7 +1352,7 @@ public interface EMFCoursesPackage extends EPackage {
 		 * The meta object literal for the '<em>Course Code</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.lang.String
+		 * @see java.lang.Object
 		 * @see eMFCourses.impl.EMFCoursesPackageImpl#getCourseCode()
 		 * @generated
 		 */

@@ -108,11 +108,11 @@ public class EMFCoursesValidator extends EObjectValidator {
 		case EMFCoursesPackage.CONSTRAINT_SLOT:
 			return validateConstraintSlot((ConstraintSlot) value, diagnostics, context);
 		case EMFCoursesPackage.STATUS_CODE:
-			return validateStatusCode((StatusCode) value, diagnostics, context);
+			return validateStatusCode(value, diagnostics, context);
 		case EMFCoursesPackage.LEVEL_CODE:
-			return validateLevelCode((LevelCode) value, diagnostics, context);
+			return validateLevelCode(value, diagnostics, context);
 		case EMFCoursesPackage.COURSE_CODE:
-			return validateCourseCode((String) value, diagnostics, context);
+			return validateCourseCode(value, diagnostics, context);
 		default:
 			return true;
 		}
@@ -304,8 +304,9 @@ public class EMFCoursesValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateStatusCode(StatusCode statusCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+	public boolean validateCourseCode(Object courseCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = validateCourseCode_Pattern(courseCode, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -313,9 +314,8 @@ public class EMFCoursesValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCourseCode(String courseCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateCourseCode_Pattern(courseCode, diagnostics, context);
-		return result;
+	public boolean validateStatusCode(StatusCode statusCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
@@ -333,7 +333,7 @@ public class EMFCoursesValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCourseCode_Pattern(String courseCode, DiagnosticChain diagnostics,
+	public boolean validateCourseCode_Pattern(Object courseCode, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return validatePattern(EMFCoursesPackage.Literals.COURSE_CODE, courseCode, COURSE_CODE__PATTERN__VALUES,
 				diagnostics, context);

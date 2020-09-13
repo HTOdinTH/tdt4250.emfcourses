@@ -281,7 +281,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EReference getProgramme_RootYears() {
-		return (EReference) programmeEClass.getEStructuralFeatures().get(0);
+		return (EReference) programmeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -291,7 +291,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EAttribute getProgramme_Code() {
-		return (EAttribute) programmeEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) programmeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -301,7 +301,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EAttribute getProgramme_Name() {
-		return (EAttribute) programmeEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) programmeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -350,8 +350,18 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getYear_Specialization() {
+		return (EAttribute) yearEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getYear_Semesters() {
-		return (EReference) yearEClass.getEStructuralFeatures().get(1);
+		return (EReference) yearEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -361,7 +371,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EReference getYear_NextYearOptions() {
-		return (EReference) yearEClass.getEStructuralFeatures().get(2);
+		return (EReference) yearEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -381,7 +391,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EAttribute getYear_TotalCredits() {
-		return (EAttribute) yearEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) yearEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -401,17 +411,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EReference getSemester_Slots() {
-		return (EReference) semesterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSemester_Specialization() {
-		return (EAttribute) semesterEClass.getEStructuralFeatures().get(1);
+		return (EReference) semesterEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -431,7 +431,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EReference getSemester_Year() {
-		return (EReference) semesterEClass.getEStructuralFeatures().get(3);
+		return (EReference) semesterEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -441,7 +441,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EAttribute getSemester_Season() {
-		return (EAttribute) semesterEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) semesterEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -461,7 +461,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EAttribute getSlot_MaxCredits() {
-		return (EAttribute) slotEClass.getEStructuralFeatures().get(0);
+		return (EAttribute) slotEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -471,7 +471,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EReference getSlot_Semester() {
-		return (EReference) slotEClass.getEStructuralFeatures().get(1);
+		return (EReference) slotEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -481,7 +481,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 	 */
 	@Override
 	public EAttribute getSlot_Status() {
-		return (EAttribute) slotEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) slotEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -595,30 +595,30 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 		createEAttribute(courseEClass, COURSE__LEVEL);
 
 		programmeEClass = createEClass(PROGRAMME);
-		createEReference(programmeEClass, PROGRAMME__ROOT_YEARS);
 		createEAttribute(programmeEClass, PROGRAMME__CODE);
 		createEAttribute(programmeEClass, PROGRAMME__NAME);
+		createEReference(programmeEClass, PROGRAMME__ROOT_YEARS);
 		createEAttribute(programmeEClass, PROGRAMME__LENGTH);
 		createEAttribute(programmeEClass, PROGRAMME__TOTAL_CREDITS);
 
 		yearEClass = createEClass(YEAR);
 		createEReference(yearEClass, YEAR__PROGRAMME);
+		createEAttribute(yearEClass, YEAR__SPECIALIZATION);
+		createEAttribute(yearEClass, YEAR__TOTAL_CREDITS);
+		createEReference(yearEClass, YEAR__PREVIOUS_YEAR);
 		createEReference(yearEClass, YEAR__SEMESTERS);
 		createEReference(yearEClass, YEAR__NEXT_YEAR_OPTIONS);
-		createEReference(yearEClass, YEAR__PREVIOUS_YEAR);
-		createEAttribute(yearEClass, YEAR__TOTAL_CREDITS);
 
 		semesterEClass = createEClass(SEMESTER);
-		createEReference(semesterEClass, SEMESTER__SLOTS);
-		createEAttribute(semesterEClass, SEMESTER__SPECIALIZATION);
-		createEAttribute(semesterEClass, SEMESTER__MAX_CREDITS);
 		createEReference(semesterEClass, SEMESTER__YEAR);
+		createEReference(semesterEClass, SEMESTER__SLOTS);
+		createEAttribute(semesterEClass, SEMESTER__MAX_CREDITS);
 		createEAttribute(semesterEClass, SEMESTER__SEASON);
 
 		slotEClass = createEClass(SLOT);
-		createEAttribute(slotEClass, SLOT__MAX_CREDITS);
 		createEReference(slotEClass, SLOT__SEMESTER);
 		createEAttribute(slotEClass, SLOT__STATUS);
+		createEAttribute(slotEClass, SLOT__MAX_CREDITS);
 		createEOperation(slotEClass, SLOT___VALID_CHOICE__COURSE);
 
 		selectionSlotEClass = createEClass(SELECTION_SLOT);
@@ -687,13 +687,13 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 
 		initEClass(programmeEClass, Programme.class, "Programme", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProgramme_RootYears(), this.getYear(), this.getYear_Programme(), "rootYears", null, 1, -1,
-				Programme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProgramme_Code(), ecorePackage.getEString(), "code", null, 1, 1, Programme.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProgramme_Name(), ecorePackage.getEString(), "name", null, 0, 1, Programme.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramme_RootYears(), this.getYear(), this.getYear_Programme(), "rootYears", null, 1, -1,
+				Programme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProgramme_Length(), ecorePackage.getEInt(), "length", null, 0, 1, Programme.class,
 				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProgramme_TotalCredits(), ecorePackage.getEFloat(), "totalCredits", null, 0, 1,
@@ -704,42 +704,41 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 		initEReference(getYear_Programme(), this.getProgramme(), this.getProgramme_RootYears(), "programme", null, 0, 1,
 				Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYear_Specialization(), ecorePackage.getEString(), "Specialization", null, 0, 1, Year.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYear_TotalCredits(), ecorePackage.getEFloat(), "totalCredits", null, 0, 1, Year.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getYear_PreviousYear(), this.getYear(), this.getYear_NextYearOptions(), "previousYear", null, 0,
+				1, Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYear_Semesters(), this.getSemester(), this.getSemester_Year(), "semesters", null, 2, 2,
 				Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYear_NextYearOptions(), this.getYear(), this.getYear_PreviousYear(), "nextYearOptions", null,
 				0, -1, Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getYear_PreviousYear(), this.getYear(), this.getYear_NextYearOptions(), "previousYear", null, 0,
-				1, Year.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYear_TotalCredits(), ecorePackage.getEFloat(), "totalCredits", null, 0, 1, Year.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(semesterEClass, Semester.class, "Semester", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSemester_Slots(), this.getSlot(), this.getSlot_Semester(), "slots", null, 0, -1,
-				Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSemester_Specialization(), ecorePackage.getEString(), "Specialization", null, 0, 1,
-				Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSemester_MaxCredits(), ecorePackage.getEFloat(), "maxCredits", null, 0, 1, Semester.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSemester_Year(), this.getYear(), this.getYear_Semesters(), "year", null, 1, 1, Semester.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSemester_Slots(), this.getSlot(), this.getSlot_Semester(), "slots", null, 0, -1,
+				Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSemester_MaxCredits(), ecorePackage.getEFloat(), "maxCredits", null, 0, 1, Semester.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSemester_Season(), ecorePackage.getEString(), "Season", null, 0, 1, Semester.class,
 				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(slotEClass, Slot.class, "Slot", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSlot_MaxCredits(), ecorePackage.getEFloat(), "maxCredits", "7.5", 1, 1, Slot.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSlot_Semester(), this.getSemester(), this.getSemester_Slots(), "semester", null, 0, 1,
 				Slot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSlot_Status(), this.getStatusCode(), "status", null, 1, 1, Slot.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSlot_MaxCredits(), ecorePackage.getEFloat(), "maxCredits", "7.5", 1, 1, Slot.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getSlot__ValidChoice__Course(), ecorePackage.getEBoolean(), "validChoice", 1, 1,
 				IS_UNIQUE, IS_ORDERED);
@@ -769,7 +768,7 @@ public class EMFCoursesPackageImpl extends EPackageImpl implements EMFCoursesPac
 		addEEnumLiteral(levelCodeEEnum, LevelCode.HIGH);
 
 		// Initialize data types
-		initEDataType(courseCodeEDataType, String.class, "CourseCode", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(courseCodeEDataType, Object.class, "CourseCode", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

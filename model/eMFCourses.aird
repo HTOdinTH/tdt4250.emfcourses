@@ -5,7 +5,7 @@
     <semanticResources>eMFCourses.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_vn204PWwEeqpCtcv7WoM3g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aI7_wfWxEeqpCtcv7WoM3g" name="eMFCourses class diagram" repPath="#_aI2gMPWxEeqpCtcv7WoM3g" changeId="5833747c-54f8-4fc9-8950-de51c92f9097">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aI7_wfWxEeqpCtcv7WoM3g" name="eMFCourses class diagram" repPath="#_aI2gMPWxEeqpCtcv7WoM3g" changeId="2a2f0919-5c19-474e-905a-1cf291515d04">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="eMFCourses.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -601,7 +601,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EDataType']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EDataType']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Y01kgPW6EeqpCtcv7WoM3g" name="java.lang.String" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Y01kgPW6EeqpCtcv7WoM3g" name="java.lang.Object" tooltipText="">
         <target xmi:type="ecore:EDataType" href="eMFCourses.ecore#//CourseCode"/>
         <semanticElements xmi:type="ecore:EDataType" href="eMFCourses.ecore#//CourseCode"/>
         <decorations xmi:type="viewpoint:Decoration" uid="_Y02LkPW6EeqpCtcv7WoM3g">

@@ -33,15 +33,46 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link eMFCourses.impl.YearImpl#getProgramme <em>Programme</em>}</li>
+ *   <li>{@link eMFCourses.impl.YearImpl#getSpecialization <em>Specialization</em>}</li>
+ *   <li>{@link eMFCourses.impl.YearImpl#getTotalCredits <em>Total Credits</em>}</li>
+ *   <li>{@link eMFCourses.impl.YearImpl#getPreviousYear <em>Previous Year</em>}</li>
  *   <li>{@link eMFCourses.impl.YearImpl#getSemesters <em>Semesters</em>}</li>
  *   <li>{@link eMFCourses.impl.YearImpl#getNextYearOptions <em>Next Year Options</em>}</li>
- *   <li>{@link eMFCourses.impl.YearImpl#getPreviousYear <em>Previous Year</em>}</li>
- *   <li>{@link eMFCourses.impl.YearImpl#getTotalCredits <em>Total Credits</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class YearImpl extends MinimalEObjectImpl.Container implements Year {
+	/**
+	 * The default value of the '{@link #getSpecialization() <em>Specialization</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpecialization()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SPECIALIZATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSpecialization() <em>Specialization</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpecialization()
+	 * @generated
+	 * @ordered
+	 */
+	protected String specialization = SPECIALIZATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTotalCredits() <em>Total Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotalCredits()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float TOTAL_CREDITS_EDEFAULT = 0.0F;
+
 	/**
 	 * The cached value of the '{@link #getSemesters() <em>Semesters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -61,16 +92,6 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 	 * @ordered
 	 */
 	protected EList<Year> nextYearOptions;
-
-	/**
-	 * The default value of the '{@link #getTotalCredits() <em>Total Credits</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTotalCredits()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float TOTAL_CREDITS_EDEFAULT = 0.0F;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,6 +157,30 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.YEAR__PROGRAMME, newProgramme,
 					newProgramme));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSpecialization() {
+		return specialization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSpecialization(String newSpecialization) {
+		String oldSpecialization = specialization;
+		specialization = newSpecialization;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.YEAR__SPECIALIZATION,
+					oldSpecialization, specialization));
 	}
 
 	/**
@@ -236,14 +281,14 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetProgramme((Programme) otherEnd, msgs);
-		case EMFCoursesPackage.YEAR__SEMESTERS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSemesters()).basicAdd(otherEnd, msgs);
-		case EMFCoursesPackage.YEAR__NEXT_YEAR_OPTIONS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getNextYearOptions()).basicAdd(otherEnd, msgs);
 		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetPreviousYear((Year) otherEnd, msgs);
+		case EMFCoursesPackage.YEAR__SEMESTERS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSemesters()).basicAdd(otherEnd, msgs);
+		case EMFCoursesPackage.YEAR__NEXT_YEAR_OPTIONS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getNextYearOptions()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -258,12 +303,12 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 		switch (featureID) {
 		case EMFCoursesPackage.YEAR__PROGRAMME:
 			return basicSetProgramme(null, msgs);
+		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
+			return basicSetPreviousYear(null, msgs);
 		case EMFCoursesPackage.YEAR__SEMESTERS:
 			return ((InternalEList<?>) getSemesters()).basicRemove(otherEnd, msgs);
 		case EMFCoursesPackage.YEAR__NEXT_YEAR_OPTIONS:
 			return ((InternalEList<?>) getNextYearOptions()).basicRemove(otherEnd, msgs);
-		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
-			return basicSetPreviousYear(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -296,14 +341,16 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 		switch (featureID) {
 		case EMFCoursesPackage.YEAR__PROGRAMME:
 			return getProgramme();
+		case EMFCoursesPackage.YEAR__SPECIALIZATION:
+			return getSpecialization();
+		case EMFCoursesPackage.YEAR__TOTAL_CREDITS:
+			return getTotalCredits();
+		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
+			return getPreviousYear();
 		case EMFCoursesPackage.YEAR__SEMESTERS:
 			return getSemesters();
 		case EMFCoursesPackage.YEAR__NEXT_YEAR_OPTIONS:
 			return getNextYearOptions();
-		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
-			return getPreviousYear();
-		case EMFCoursesPackage.YEAR__TOTAL_CREDITS:
-			return getTotalCredits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -320,6 +367,12 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 		case EMFCoursesPackage.YEAR__PROGRAMME:
 			setProgramme((Programme) newValue);
 			return;
+		case EMFCoursesPackage.YEAR__SPECIALIZATION:
+			setSpecialization((String) newValue);
+			return;
+		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
+			setPreviousYear((Year) newValue);
+			return;
 		case EMFCoursesPackage.YEAR__SEMESTERS:
 			getSemesters().clear();
 			getSemesters().addAll((Collection<? extends Semester>) newValue);
@@ -327,9 +380,6 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 		case EMFCoursesPackage.YEAR__NEXT_YEAR_OPTIONS:
 			getNextYearOptions().clear();
 			getNextYearOptions().addAll((Collection<? extends Year>) newValue);
-			return;
-		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
-			setPreviousYear((Year) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -346,14 +396,17 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 		case EMFCoursesPackage.YEAR__PROGRAMME:
 			setProgramme((Programme) null);
 			return;
+		case EMFCoursesPackage.YEAR__SPECIALIZATION:
+			setSpecialization(SPECIALIZATION_EDEFAULT);
+			return;
+		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
+			setPreviousYear((Year) null);
+			return;
 		case EMFCoursesPackage.YEAR__SEMESTERS:
 			getSemesters().clear();
 			return;
 		case EMFCoursesPackage.YEAR__NEXT_YEAR_OPTIONS:
 			getNextYearOptions().clear();
-			return;
-		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
-			setPreviousYear((Year) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -369,16 +422,36 @@ public class YearImpl extends MinimalEObjectImpl.Container implements Year {
 		switch (featureID) {
 		case EMFCoursesPackage.YEAR__PROGRAMME:
 			return getProgramme() != null;
+		case EMFCoursesPackage.YEAR__SPECIALIZATION:
+			return SPECIALIZATION_EDEFAULT == null ? specialization != null
+					: !SPECIALIZATION_EDEFAULT.equals(specialization);
+		case EMFCoursesPackage.YEAR__TOTAL_CREDITS:
+			return getTotalCredits() != TOTAL_CREDITS_EDEFAULT;
+		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
+			return getPreviousYear() != null;
 		case EMFCoursesPackage.YEAR__SEMESTERS:
 			return semesters != null && !semesters.isEmpty();
 		case EMFCoursesPackage.YEAR__NEXT_YEAR_OPTIONS:
 			return nextYearOptions != null && !nextYearOptions.isEmpty();
-		case EMFCoursesPackage.YEAR__PREVIOUS_YEAR:
-			return getPreviousYear() != null;
-		case EMFCoursesPackage.YEAR__TOTAL_CREDITS:
-			return getTotalCredits() != TOTAL_CREDITS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (Specialization: ");
+		result.append(specialization);
+		result.append(')');
+		return result.toString();
 	}
 
 } //YearImpl

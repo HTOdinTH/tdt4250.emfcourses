@@ -15,10 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.Semester#getSlots <em>Slots</em>}</li>
- *   <li>{@link eMFCourses.Semester#getSpecialization <em>Specialization</em>}</li>
- *   <li>{@link eMFCourses.Semester#getMaxCredits <em>Max Credits</em>}</li>
  *   <li>{@link eMFCourses.Semester#getYear <em>Year</em>}</li>
+ *   <li>{@link eMFCourses.Semester#getSlots <em>Slots</em>}</li>
+ *   <li>{@link eMFCourses.Semester#getMaxCredits <em>Max Credits</em>}</li>
  *   <li>{@link eMFCourses.Semester#getSeason <em>Season</em>}</li>
  * </ul>
  *
@@ -40,28 +39,6 @@ public interface Semester extends EObject {
 	 * @generated
 	 */
 	EList<Slot> getSlots();
-
-	/**
-	 * Returns the value of the '<em><b>Specialization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Specialization</em>' attribute.
-	 * @see #setSpecialization(String)
-	 * @see eMFCourses.EMFCoursesPackage#getSemester_Specialization()
-	 * @model
-	 * @generated
-	 */
-	String getSpecialization();
-
-	/**
-	 * Sets the value of the '{@link eMFCourses.Semester#getSpecialization <em>Specialization</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Specialization</em>' attribute.
-	 * @see #getSpecialization()
-	 * @generated
-	 */
-	void setSpecialization(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Max Credits</b></em>' attribute.

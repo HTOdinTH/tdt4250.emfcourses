@@ -16,10 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link eMFCourses.Year#getProgramme <em>Programme</em>}</li>
+ *   <li>{@link eMFCourses.Year#getSpecialization <em>Specialization</em>}</li>
+ *   <li>{@link eMFCourses.Year#getTotalCredits <em>Total Credits</em>}</li>
+ *   <li>{@link eMFCourses.Year#getPreviousYear <em>Previous Year</em>}</li>
  *   <li>{@link eMFCourses.Year#getSemesters <em>Semesters</em>}</li>
  *   <li>{@link eMFCourses.Year#getNextYearOptions <em>Next Year Options</em>}</li>
- *   <li>{@link eMFCourses.Year#getPreviousYear <em>Previous Year</em>}</li>
- *   <li>{@link eMFCourses.Year#getTotalCredits <em>Total Credits</em>}</li>
  * </ul>
  *
  * @see eMFCourses.EMFCoursesPackage#getYear()
@@ -51,6 +52,28 @@ public interface Year extends EObject {
 	 * @generated
 	 */
 	void setProgramme(Programme value);
+
+	/**
+	 * Returns the value of the '<em><b>Specialization</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Specialization</em>' attribute.
+	 * @see #setSpecialization(String)
+	 * @see eMFCourses.EMFCoursesPackage#getYear_Specialization()
+	 * @model
+	 * @generated
+	 */
+	String getSpecialization();
+
+	/**
+	 * Sets the value of the '{@link eMFCourses.Year#getSpecialization <em>Specialization</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Specialization</em>' attribute.
+	 * @see #getSpecialization()
+	 * @generated
+	 */
+	void setSpecialization(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Semesters</b></em>' containment reference list.

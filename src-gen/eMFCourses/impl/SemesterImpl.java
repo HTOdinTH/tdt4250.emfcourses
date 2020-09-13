@@ -32,10 +32,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link eMFCourses.impl.SemesterImpl#getSlots <em>Slots</em>}</li>
- *   <li>{@link eMFCourses.impl.SemesterImpl#getSpecialization <em>Specialization</em>}</li>
- *   <li>{@link eMFCourses.impl.SemesterImpl#getMaxCredits <em>Max Credits</em>}</li>
  *   <li>{@link eMFCourses.impl.SemesterImpl#getYear <em>Year</em>}</li>
+ *   <li>{@link eMFCourses.impl.SemesterImpl#getSlots <em>Slots</em>}</li>
+ *   <li>{@link eMFCourses.impl.SemesterImpl#getMaxCredits <em>Max Credits</em>}</li>
  *   <li>{@link eMFCourses.impl.SemesterImpl#getSeason <em>Season</em>}</li>
  * </ul>
  *
@@ -51,26 +50,6 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @ordered
 	 */
 	protected EList<Slot> slots;
-
-	/**
-	 * The default value of the '{@link #getSpecialization() <em>Specialization</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpecialization()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SPECIALIZATION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSpecialization() <em>Specialization</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpecialization()
-	 * @generated
-	 * @ordered
-	 */
-	protected String specialization = SPECIALIZATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMaxCredits() <em>Max Credits</em>}' attribute.
@@ -123,30 +102,6 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 					EMFCoursesPackage.SLOT__SEMESTER);
 		}
 		return slots;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getSpecialization() {
-		return specialization;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSpecialization(String newSpecialization) {
-		String oldSpecialization = specialization;
-		specialization = newSpecialization;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFCoursesPackage.SEMESTER__SPECIALIZATION,
-					oldSpecialization, specialization));
 	}
 
 	/**
@@ -216,7 +171,7 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 */
 	@Override
 	public String getSeason() {
-		return this.getYear().getSemesters().indexOf(this) == 0 ? "Fall" : "Spring"; 
+		return this.getYear().getSemesters().indexOf(this) == 0 ? "Fall" : "Spring";
 	}
 
 	/**
@@ -228,12 +183,12 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__SLOTS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSlots()).basicAdd(otherEnd, msgs);
 		case EMFCoursesPackage.SEMESTER__YEAR:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetYear((Year) otherEnd, msgs);
+		case EMFCoursesPackage.SEMESTER__SLOTS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSlots()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -246,10 +201,10 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__SLOTS:
-			return ((InternalEList<?>) getSlots()).basicRemove(otherEnd, msgs);
 		case EMFCoursesPackage.SEMESTER__YEAR:
 			return basicSetYear(null, msgs);
+		case EMFCoursesPackage.SEMESTER__SLOTS:
+			return ((InternalEList<?>) getSlots()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -276,14 +231,12 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__SLOTS:
-			return getSlots();
-		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
-			return getSpecialization();
-		case EMFCoursesPackage.SEMESTER__MAX_CREDITS:
-			return getMaxCredits();
 		case EMFCoursesPackage.SEMESTER__YEAR:
 			return getYear();
+		case EMFCoursesPackage.SEMESTER__SLOTS:
+			return getSlots();
+		case EMFCoursesPackage.SEMESTER__MAX_CREDITS:
+			return getMaxCredits();
 		case EMFCoursesPackage.SEMESTER__SEASON:
 			return getSeason();
 		}
@@ -299,15 +252,12 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case EMFCoursesPackage.SEMESTER__YEAR:
+			setYear((Year) newValue);
+			return;
 		case EMFCoursesPackage.SEMESTER__SLOTS:
 			getSlots().clear();
 			getSlots().addAll((Collection<? extends Slot>) newValue);
-			return;
-		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
-			setSpecialization((String) newValue);
-			return;
-		case EMFCoursesPackage.SEMESTER__YEAR:
-			setYear((Year) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -321,14 +271,11 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__SLOTS:
-			getSlots().clear();
-			return;
-		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
-			setSpecialization(SPECIALIZATION_EDEFAULT);
-			return;
 		case EMFCoursesPackage.SEMESTER__YEAR:
 			setYear((Year) null);
+			return;
+		case EMFCoursesPackage.SEMESTER__SLOTS:
+			getSlots().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -342,36 +289,16 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EMFCoursesPackage.SEMESTER__SLOTS:
-			return slots != null && !slots.isEmpty();
-		case EMFCoursesPackage.SEMESTER__SPECIALIZATION:
-			return SPECIALIZATION_EDEFAULT == null ? specialization != null
-					: !SPECIALIZATION_EDEFAULT.equals(specialization);
-		case EMFCoursesPackage.SEMESTER__MAX_CREDITS:
-			return getMaxCredits() != MAX_CREDITS_EDEFAULT;
 		case EMFCoursesPackage.SEMESTER__YEAR:
 			return getYear() != null;
+		case EMFCoursesPackage.SEMESTER__SLOTS:
+			return slots != null && !slots.isEmpty();
+		case EMFCoursesPackage.SEMESTER__MAX_CREDITS:
+			return getMaxCredits() != MAX_CREDITS_EDEFAULT;
 		case EMFCoursesPackage.SEMESTER__SEASON:
 			return SEASON_EDEFAULT == null ? getSeason() != null : !SEASON_EDEFAULT.equals(getSeason());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (Specialization: ");
-		result.append(specialization);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SemesterImpl

@@ -227,8 +227,8 @@ public class EMFCoursesFactoryImpl extends EFactoryImpl implements EMFCoursesFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createCourseCodeFromString(EDataType eDataType, String initialValue) {
-		return (String) super.createFromString(eDataType, initialValue);
+	public Object createCourseCodeFromString(EDataType eDataType, String initialValue) {
+		return super.createFromString(eDataType, initialValue);
 	}
 
 	/**

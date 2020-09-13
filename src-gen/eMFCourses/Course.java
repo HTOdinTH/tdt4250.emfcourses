@@ -29,12 +29,12 @@ public interface Course extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
+	 * @see #setCode(Object)
 	 * @see eMFCourses.EMFCoursesPackage#getCourse_Code()
 	 * @model id="true" dataType="eMFCourses.CourseCode" required="true"
 	 * @generated
 	 */
-	String getCode();
+	Object getCode();
 
 	/**
 	 * Sets the value of the '{@link eMFCourses.Course#getCode <em>Code</em>}' attribute.
@@ -44,7 +44,7 @@ public interface Course extends EObject {
 	 * @see #getCode()
 	 * @generated
 	 */
-	void setCode(String value);
+	void setCode(Object value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

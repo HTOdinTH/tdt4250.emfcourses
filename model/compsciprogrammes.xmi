@@ -424,10 +424,6 @@
       name="Bærekraftig akvakultur i fremtidens matproduksjon"
       credits="7.5"
       level="H"/>
-  <courses code="BI2098"
-      name=" Eksperter i team - Saving the World is not Rocket Science"
-      credits="7.5"
-      level="H"/>
   <courses code="EIT3006"
       name="Eksperter i team - forbruk - design - livsstil"
       credits="7.5"
@@ -436,24 +432,12 @@
       name="Eksperter i team - Fortalt digitalt"
       credits="7.5"
       level="H"/>
-  <courses code="EIT3016"
-      name=" Eksperter i team - Ingen skade skjedd: Medieteknologier for en bedre verden"
-      credits="7.5"
-      level="H"/>
   <courses code="KJ2095"
       name="Eksperter i team - Miljøpåvirkning og helse"
       credits="7.5"
       level="H"/>
   <courses code="MFEL4851"
       name="Eksperter i team - Det personlige genom"
-      credits="7.5"
-      level="H"/>
-  <courses code="MFEL4854"
-      name=" Eksperter i team - Barns blikk på folkehelse - barnehagen som arena"
-      credits="7.5"
-      level="H"/>
-  <courses code="PED3801"
-      name=" Eksperter i team - Virtuell og utvidet virkelighet (VR/AR) i læring og trening"
       credits="7.5"
       level="H"/>
   <courses code="PED3802"
@@ -480,24 +464,12 @@
       name="Eksperter i team - SimsalaBIM"
       credits="7.5"
       level="H"/>
-  <courses code="TBA4860"
-      name=" Eksperter i team - Smart Meters in Buildings: New Business Opportunities for the Digital Age in Norway"
-      credits="7.5"
-      level="H"/>
   <courses code="TBA4861"
       name="Eksperter i team - Innovativ bytransport"
       credits="7.5"
       level="H"/>
   <courses code="TBA4850"
       name="Eksperter i team - Stress og diett i studenters liv"
-      credits="7.5"
-      level="H"/>
-  <courses code="TDT4850"
-      name=" Eksperter i team - Startup-Driven Social Innovation for Social good"
-      credits="7.5"
-      level="H"/>
-  <courses code="TD4856"
-      name=" Eksperter i team - IT-styring av moderne lastebiler"
       credits="7.5"
       level="H"/>
   <courses code="TD4857"
@@ -516,20 +488,180 @@
       name="Eksperter i team - Vannkraft for fremtiden"
       credits="7.5"
       level="H"/>
-  <courses code="TET4850"
-      name=" Eksperter i team - Energiutfordringer for en bærekraftig fremtid"
-      credits="7.5"
-      level="H"/>
-  <courses code="TET4853"
-      name=" Eksperter i team - Sustainable Energy and Society – Digital, Green Shift"
-      credits="7.5"
-      level="H"/>
-  <courses code="TET4854"
-      name=" Eksperter i team - Elektrifisering av norsk sokkel – grønn olje- og gassproduksjon"
-      credits="7.5"
-      level="H"/>
   <programmes
       code="MTDT"
       name="Datateknologi">
+    <rootYears>
+      <semesters>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            maxCredits="30.0"
+            options="EXPH0004 TDT4110 TMA4100 TMA4140"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            options="HMA0002"/>
+      </semesters>
+      <semesters>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            maxCredits="30.0"
+            options="TDT4100 TDT4112 TFE4101 TMA4115"/>
+      </semesters>
+      <nextYearOptions>
+        <semesters>
+          <slots
+              xsi:type="programmes:SelectionSlot"
+              maxCredits="30.0"
+              options="TDT4113 TDT4120 TDT4160 TMA4240"/>
+        </semesters>
+        <semesters>
+          <slots
+              xsi:type="programmes:SelectionSlot"
+              maxCredits="30.0"
+              options="TDT4140 TDT4145 TDT4180 TTM4100"/>
+        </semesters>
+        <nextYearOptions
+            Specialization="Programvaresystemer">
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"
+                maxCredits="22.5"
+                options="TDT4136 TDT4175 TMA4135"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"
+                status="VA"
+                options="IT2810 TDT4117 TDT4137 TDT4165 TDT4258"/>
+          </semesters>
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"
+                maxCredits="30.0"
+                options="TDT4186 TDT4240 TFY4125 TIØ4258"/>
+          </semesters>
+          <nextYearOptions
+              Specialization="Digital Virksomhetsutvikling">
+            <semesters>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  maxCredits="22.5"
+                  options="TDT4290 TDT4252"/>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  status="VB"
+                  options="AAR4250 BSOL4610 FI3107"/>
+            </semesters>
+            <semesters>
+              <slots
+                  xsi:type="programmes:SelectionSlot"/>
+            </semesters>
+          </nextYearOptions>
+          <nextYearOptions
+              Specialization="Programvareutvikling">
+            <semesters>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  maxCredits="22.5"
+                  options="TDT4290"/>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  status="VB"
+                  options="AAR4250 BSOL4610 FI3107"/>
+            </semesters>
+            <semesters>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  maxCredits="30.0"/>
+            </semesters>
+          </nextYearOptions>
+          <nextYearOptions
+              Specialization="Interaksjonsdesign og Spillteknologi">
+            <semesters>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  maxCredits="22.5"
+                  options="TDT4290"/>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  status="VB"
+                  options="AAR4250 BSOL4610 FI3107"/>
+            </semesters>
+            <semesters>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  maxCredits="30.0"/>
+            </semesters>
+          </nextYearOptions>
+        </nextYearOptions>
+        <nextYearOptions
+            Specialization="Algoritmer og Datamaskiner">
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+          </semesters>
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+          </semesters>
+        </nextYearOptions>
+        <nextYearOptions
+            Specialization="Kunstig Intelligens">
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+          </semesters>
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+          </semesters>
+        </nextYearOptions>
+        <nextYearOptions
+            Specialization="Databaser og Søk">
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+          </semesters>
+          <semesters>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+            <slots
+                xsi:type="programmes:SelectionSlot"/>
+          </semesters>
+        </nextYearOptions>
+      </nextYearOptions>
+    </rootYears>
   </programmes>
 </programmes:Listing>
