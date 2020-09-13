@@ -2,6 +2,9 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="eMFCourses" nsURI="platform:/plugin/EMFCourses/model/eMFCourses.ecore"
     nsPrefix="programmes">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="validationDelegates" value="http://www.eclipse.org/acceleo/query/1.0"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Listing">
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" ordered="false"
         upperBound="-1" eType="#//Course" containment="true"/>
@@ -23,6 +26,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
     <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
@@ -34,6 +41,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="previousSemester" eType="#//Semester"
         eOpposite="#//Semester/nextSemesterOptions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Specialization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

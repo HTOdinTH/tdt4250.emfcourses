@@ -37,6 +37,8 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference eMFCourses.ecore#//Programme/rootSemesters"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Programme/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Programme/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Programme/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Programme/totalCredits"/>
     </genClasses>
     <genClasses ecoreClass="eMFCourses.ecore#//Semester">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eMFCourses.ecore#//Semester/programme"/>
@@ -44,6 +46,7 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference eMFCourses.ecore#//Semester/nextSemesterOptions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eMFCourses.ecore#//Semester/previousSemester"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Semester/Specialization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Semester/totalCredits"/>
     </genClasses>
     <genClasses ecoreClass="eMFCourses.ecore#//Slot">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Slot/maxCredits"/>
