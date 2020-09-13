@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<programmes:Listing
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:programmes="platform:/plugin/EMFCourses/model/eMFCourses.ecore"
+    xsi:schemaLocation="platform:/plugin/EMFCourses/model/eMFCourses.ecore eMFCourses.ecore">
+  <courses code="EXPH0004"
+      name="Examen philosophicum for naturvitenskap og teknologi"
+      credits="7.5"
+      level="X"/>
+  <courses code="TDT4110"
+      name="Informasjonsteknologi, grunnkurs"
+      credits="7.5"/>
+  <courses code="TMA4100"
+      name="Matematikk 1"
+      credits="7.5"/>
+  <courses code="TMA4140"
+      name="Diskret matematikk"
+      credits="7.5"/>
+  <courses code="HMA0002"
+      name="HMS-kurs for 1. årsstudenter"/>
+  <courses code="TDT4100"
+      name="Objektorientert programmering"
+      credits="7.5"/>
+  <courses code="TDT4112"
+      name="Programmeringslab for datateknologi"
+      credits="7.5"/>
+  <courses code="TFE4101"
+      name="Krets- og digitalteknikk"
+      credits="7.5"/>
+  <courses code="TMA4115"
+      name="Matematikk 3"
+      credits="7.5"/>
+  <courses code="TDT4113"
+      name="Datateknologi,  programmeringsprosjekt"
+      credits="7.5"
+      level="2"/>
+  <courses code="TDT4120"
+      name="Algoritmer og datastrukturer"
+      credits="7.5"
+      level="2"/>
+  <courses code="TDT4160"
+      name="Datamaskiner og digitalteknikk"
+      credits="7.5"
+      level="2"/>
+  <courses code="TMA4240"
+      name="Statistikk"
+      credits="7.5"
+      level="2"/>
+  <courses code="TDT4140"
+      name="Programvareutvikling"
+      credits="7.5"
+      level="2"/>
+  <courses code="TDT4145"
+      name="Datamodellering og databasesystemer"
+      credits="7.5"
+      level="2"/>
+  <courses code="TDT4180"
+      name="Menneske-maskin interaksjon"
+      credits="7.5"
+      level="2"/>
+  <courses code="TTM4100"
+      name="Kommunikasjon - tjenester og nett"
+      credits="7.5"
+      level="2"/>
+  <courses code="TDT4136"
+      name="Introduksjon til kunstig intelligens"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4258"
+      name="Maskinnær programmering"
+      credits="7.5"
+      level="3"/>
+  <courses code="TMA4135"
+      name="Matematikk 4D"
+      credits="7.5"
+      level="3"/>
+  <courses code="IT2810"
+      name="Webutvikling"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4117"
+      name="Informasjonsgjenfinning"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4137"
+      name="Kognitive arkitekturer"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4165"
+      name="Programmeringsspråk"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4175"
+      name="Informasjonssystemer"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4186"
+      name="Operativsystemer"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4205"
+      name="Kompilatorteknikk"
+      credits="7.5"
+      level="3"/>
+  <courses code="TFY4125"
+      name="Fysikk"
+      credits="7.5"
+      level="3"/>
+  <courses code="TIØ4258"
+      name="Teknologiledelse"
+      credits="7.5"
+      level="3"/>
+  <courses code="TDT4290"
+      name="Kundestyrt prosjekt"
+      credits="15.0"
+      level="H"/>
+  <courses code="TDT4295"
+      name="Datamaskinprosjekt"
+      credits="15.0"
+      level="H"/>
+  <courses code="TDT4200"
+      name="Parallelle beregninger"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4125"
+      name="Algoritmekonstruksjon"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4230"
+      name="Grafikk og visualisering"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4237"
+      name="Programvaresikkerhet"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4260"
+      name="Datamaskinarkitektur"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4265"
+      name="Datasyn"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4501"
+      name="Datateknologi, fordypningsprosjekt"
+      credits="15.0"
+      level="H"/>
+  <courses code="TDT4506"
+      name="Datateknologi, fordypningsemne"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4900"
+      name="Datateknologi, masteroppgave"
+      credits="30.0"
+      level="H"/>
+  <courses code="TDT4225"
+      name="Datamaskinkonstruksjon"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4195"
+      name="Grunnleggende visuell databehandling"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4300"
+      name="Datavarehus og datagruvedrift"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4225"
+      name="Store, distribuerte datamengder"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4305"
+      name="Big Data-arkitektur"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4150"
+      name="Avanserte databasesystemer"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4215"
+      name="Web-intelligens"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4310"
+      name="Intelligent tekstforståelse og språkanalyse"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4171"
+      name="Metoder i kunstig intelligens"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4173"
+      name="Maskinlæring og case-basert resonnering"
+      credits="7.5"
+      level="H"/>
+  <courses code="IT3105"
+      name="Kunstig intelligens programmering"
+      credits="7.5"
+      level="H"/>
+  <courses code="IT3708"
+      name="Bio-inspirert kunstig intelligens"
+      credits="7.5"
+      level="H"/>
+  <courses code="IT3030"
+      name="Dyp læring"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4240"
+      name="Programvarearkitektur"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4252"
+      name="Virksomhets-arkitektur og -innovasjon"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4257"
+      name="Digital tjenesteinnovasjon"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4242"
+      name="Avansert programvareutvikling"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4245"
+      name="Samhandlingsteknologi og sosiale medier"
+      credits="7.5"
+      level="H"/>
+  <courses code="IT3402"
+      name="Design av grafiske brukergrensesnitt"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4250"
+      name="Avansert programvaredesign"
+      credits="7.5"
+      level="H"/>
+  <courses code="AAR4250"
+      name="Arkitektur som teknologisk praksis"
+      credits="7.5"
+      level="H"/>
+  <courses code="BSOL4610"
+      name="Strategi og endring"
+      credits="7.5"
+      level="H"/>
+  <courses code="FI3107"
+      name="Bioteknologi og etikk"
+      credits="7.5"
+      level="H"/>
+  <courses code="FI5202"
+      name="Corporate Responsibility and Ethics"
+      credits="7.5"
+      level="H"/>
+  <courses code="FI5206"
+      name="Technology for a Good Society"
+      credits="7.5"
+      level="H"/>
+  <courses code="GEOG3518"
+      name="Knowledge Management in a Global Economy"
+      credits="7.5"
+      level="H"/>
+  <courses code="HIST2008"
+      name="Økonomisk historie"
+      credits="7.5"
+      level="H"/>
+  <courses code="POL2018"
+      name="Japansk kultur og politisk-økonomiske system"
+      credits="7.5"
+      level="H"/>
+  <courses code="POL2019"
+      name="Øst-Asia: Internasjonal politikk"
+      credits="7.5"
+      level="H"/>
+  <courses code="SANT3600"
+      name="Kulturforståelse for et internasjonalt arbeidsliv"
+      credits="7.5"
+      level="H"/>
+  <courses code="SOS2017"
+      name="Sikkerhet og organisasjon"
+      credits="7.5"
+      level="H"/>
+  <courses code="SOS2019"
+      name="Vår sosiale virkelighet"
+      credits="7.5"
+      level="H"/>
+  <courses code="SPRÅK3501"
+      name="Vitenskapelig kommunikasjon for ingeniører"
+      credits="7.5"
+      level="H"/>
+  <courses code="SØK1151"
+      name="Makroøkonomi for ledere"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4120"
+      name="Operasjonsanalyse, grunnkurs"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4146"
+      name="Finans for teknisk-naturvitenskapelige studenter"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4201"
+      name="Risikohåndtering, samfunnssikkerhet og beredskap"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4215"
+      name="Kontraktsrett og kontraktsforhandlinger"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4230"
+      name="Entreprenørskap og markedsorientert produktutvikling"
+      credits="7.5"
+      level="H"/>
+  <courses code="MFEL3010"
+      name="Medisin for realfag- og teknologistudenter"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4295"
+      name="Bedriftsøkonomi"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4300"
+      name="Miljøkunnskap, økosystemtjenester og bærekraft"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ4365"
+      name="Intellectual Property Management"
+      credits="7.5"
+      level="H"/>
+  <courses code="TIØ5200"
+      name="Prosjektorganisasjoner"
+      credits="7.5"
+      level="H"/>
+  <courses code="TMR4137"
+      name="Bærekraftig utnyttelse av marine ressurser"
+      credits="7.5"
+      level="H"/>
+  <courses code="TPD4114"
+      name="Visuell formidling"
+      credits="7.5"
+      level="H"/>
+  <courses code="TPD4142"
+      name="Design Thinking"
+      credits="7.5"
+      level="H"/>
+  <courses code="TPK4120"
+      name="Industriell sikkerhet og pålitelighet"
+      credits="7.5"
+      level="H"/>
+  <courses code="TPK5100"
+      name="Prosjektplanlegging og styring"
+      credits="7.5"
+      level="H"/>
+  <courses code="TSOL415"
+      name="Human Resource Management"
+      credits="7.5"
+      level="H"/>
+  <courses code="TSOL425"
+      name="Teamledelse og teknologi"
+      credits="7.5"
+      level="H"/>
+  <courses code="TTK4220"
+      name="Dynamikk i sosiale systemer"
+      credits="7.5"
+      level="H"/>
+  <courses code="TTM4165"
+      name="Digital økonomi"
+      credits="7.5"
+      level="H"/>
+  <courses code="MEDT4165"
+      name="Signalbehandling i ultralyd-avbildning"
+      credits="7.5"
+      level="H"/>
+  <courses code="MOL4010"
+      name="Grunnleggende molekylærbiologi"
+      credits="7.5"
+      level="H"/>
+  <courses code="TET4120"
+      name="Elektriske motordrifter"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4220"
+      name="Faste stoffers fysikk"
+      credits="7.5"
+      level="H"/>
+  <courses code="TMA4105"
+      name="Matematikk 2"
+      credits="7.5"
+      level="H"/>
+  <courses code="TTK4130"
+      name="Modellering og simulering"
+      credits="7.5"
+      level="H"/>
+  <courses code="TTK4135"
+      name="Optimalisering og regulering"
+      credits="7.5"
+      level="H"/>
+  <courses code="TTK4175"
+      name="Instrumenteringssystemer"
+      credits="7.5"
+      level="H"/>
+  <courses code="TTM4115"
+      name="Design av reaktive systemer 1"
+      credits="7.5"
+      level="H"/>
+  <courses code="TTM4135"
+      name="Informasjonssikkerhet"
+      credits="7.5"
+      level="H"/>
+  <courses code="BEIT4010"
+      name="BEIT4010 - Eksperter i team - Innovasjonskompetanse - fremtidens kjernekompetanse"
+      credits="7.5"
+      level="H"/>
+  <courses code="BEIT4012"
+      name="Eksperter i team - Skaping av fremtidens helsetjeneste"
+      credits="7.5"
+      level="H"/>
+  <courses code="BEIT4014"
+      name="Eksperter i team - Grønne bygg"
+      credits="7.5"
+      level="H"/>
+  <courses code="BI2097"
+      name="Bærekraftig akvakultur i fremtidens matproduksjon"
+      credits="7.5"
+      level="H"/>
+  <courses code="BI2098"
+      name=" Eksperter i team - Saving the World is not Rocket Science"
+      credits="7.5"
+      level="H"/>
+  <courses code="EIT3006"
+      name="Eksperter i team - forbruk - design - livsstil"
+      credits="7.5"
+      level="H"/>
+  <courses code="EIT3014"
+      name="Eksperter i team - Fortalt digitalt"
+      credits="7.5"
+      level="H"/>
+  <courses code="EIT3016"
+      name=" Eksperter i team - Ingen skade skjedd: Medieteknologier for en bedre verden"
+      credits="7.5"
+      level="H"/>
+  <courses code="KJ2095"
+      name="Eksperter i team - Miljøpåvirkning og helse"
+      credits="7.5"
+      level="H"/>
+  <courses code="MFEL4851"
+      name="Eksperter i team - Det personlige genom"
+      credits="7.5"
+      level="H"/>
+  <courses code="MFEL4854"
+      name=" Eksperter i team - Barns blikk på folkehelse - barnehagen som arena"
+      credits="7.5"
+      level="H"/>
+  <courses code="PED3801"
+      name=" Eksperter i team - Virtuell og utvidet virkelighet (VR/AR) i læring og trening"
+      credits="7.5"
+      level="H"/>
+  <courses code="PED3802"
+      name="Eksperter i team - Miljøer for læring ved NTNU"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4851"
+      name="Eksperter i team - Idrettsteknologi"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4853"
+      name="Eksperter i team - Punktlig og effektiv jernbane"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4855"
+      name="Eksperter i team - Smart bygging"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4856"
+      name="Eksperter i team - Gode idrettsanlegg"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4859"
+      name="Eksperter i team - SimsalaBIM"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4860"
+      name=" Eksperter i team - Smart Meters in Buildings: New Business Opportunities for the Digital Age in Norway"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4861"
+      name="Eksperter i team - Innovativ bytransport"
+      credits="7.5"
+      level="H"/>
+  <courses code="TBA4850"
+      name="Eksperter i team - Stress og diett i studenters liv"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4850"
+      name=" Eksperter i team - Startup-Driven Social Innovation for Social good"
+      credits="7.5"
+      level="H"/>
+  <courses code="TD4856"
+      name=" Eksperter i team - IT-styring av moderne lastebiler"
+      credits="7.5"
+      level="H"/>
+  <courses code="TD4857"
+      name="Eksperter i team - Smarte byer som et komplekst system"
+      credits="7.5"
+      level="H"/>
+  <courses code="TDT4860"
+      name="Eksperter i team - Digitale tvillinger"
+      credits="7.5"
+      level="H"/>
+  <courses code="TEP4851"
+      name="Eksperter i team - Smart energibruk"
+      credits="7.5"
+      level="H"/>
+  <courses code="TEP4853"
+      name="Eksperter i team - Vannkraft for fremtiden"
+      credits="7.5"
+      level="H"/>
+  <courses code="TET4850"
+      name=" Eksperter i team - Energiutfordringer for en bærekraftig fremtid"
+      credits="7.5"
+      level="H"/>
+  <courses code="TET4853"
+      name=" Eksperter i team - Sustainable Energy and Society – Digital, Green Shift"
+      credits="7.5"
+      level="H"/>
+  <courses code="TET4854"
+      name=" Eksperter i team - Elektrifisering av norsk sokkel – grønn olje- og gassproduksjon"
+      credits="7.5"
+      level="H"/>
+  <programmes
+      code="MTDT"
+      name="Datateknologi">
+    <rootSemesters>
+      <slots
+          xsi:type="programmes:ConstraintSlot"/>
+      <slots
+          xsi:type="programmes:ConstraintSlot"/>
+      <slots
+          xsi:type="programmes:ConstraintSlot"/>
+      <slots
+          xsi:type="programmes:ConstraintSlot"/>
+      <nextSemesterOptions>
+        <slots
+            xsi:type="programmes:ConstraintSlot"/>
+        <slots
+            xsi:type="programmes:ConstraintSlot"/>
+        <slots
+            xsi:type="programmes:ConstraintSlot"/>
+        <slots
+            xsi:type="programmes:ConstraintSlot"/>
+        <nextSemesterOptions>
+          <slots
+              xsi:type="programmes:ConstraintSlot"/>
+          <slots
+              xsi:type="programmes:ConstraintSlot"/>
+          <slots
+              xsi:type="programmes:ConstraintSlot"/>
+          <slots
+              xsi:type="programmes:ConstraintSlot"/>
+          <nextSemesterOptions>
+            <slots
+                xsi:type="programmes:ConstraintSlot"/>
+            <slots
+                xsi:type="programmes:ConstraintSlot"/>
+            <slots
+                xsi:type="programmes:ConstraintSlot"/>
+            <slots
+                xsi:type="programmes:ConstraintSlot"/>
+            <nextSemesterOptions
+                Specialization="Algoritmer og datamaskiner">
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  options="IT2810 TDT4117 TDT4137 TDT4165 TDT4175"/>
+              <nextSemesterOptions>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <nextSemesterOptions
+                    Specialization="Algoritmer og HPC">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+                <nextSemesterOptions
+                    Specialization="Datamaskiner og systemprogramvare">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+                <nextSemesterOptions
+                    Specialization="Visuell databehandling">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+              </nextSemesterOptions>
+            </nextSemesterOptions>
+            <nextSemesterOptions
+                Specialization="Databaser og søk">
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  options="IT2810 TDT4117 TDT4137 TDT4165 TDT4175"/>
+              <nextSemesterOptions>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <nextSemesterOptions
+                    Specialization="">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+              </nextSemesterOptions>
+            </nextSemesterOptions>
+            <nextSemesterOptions
+                Specialization="Kunstig intelligens">
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  options="IT2810 TDT4117 TDT4137 TDT4165 TDT4175"/>
+              <nextSemesterOptions>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <nextSemesterOptions
+                    Specialization="">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+              </nextSemesterOptions>
+            </nextSemesterOptions>
+            <nextSemesterOptions
+                Specialization="Programvaresystemer">
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:ConstraintSlot"/>
+              <slots
+                  xsi:type="programmes:SelectionSlot"
+                  options="IT2810 TDT4117 TDT4137 TDT4165 TDT4175"/>
+              <nextSemesterOptions>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <slots
+                    xsi:type="programmes:ConstraintSlot"/>
+                <nextSemesterOptions
+                    Specialization="Digital virksomhetsutvikling">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+                <nextSemesterOptions
+                    Specialization="Interaksjonsdesign og spillteknologi">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+                <nextSemesterOptions
+                    Specialization="Programvareutvikling">
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:ConstraintSlot"/>
+                  <slots
+                      xsi:type="programmes:SelectionSlot"/>
+                  <nextSemesterOptions>
+                    <slots
+                        xsi:type="programmes:ConstraintSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <slots
+                        xsi:type="programmes:SelectionSlot"/>
+                    <nextSemesterOptions>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <slots
+                          xsi:type="programmes:ConstraintSlot"/>
+                      <nextSemesterOptions>
+                        <slots
+                            xsi:type="programmes:ConstraintSlot"/>
+                      </nextSemesterOptions>
+                    </nextSemesterOptions>
+                  </nextSemesterOptions>
+                </nextSemesterOptions>
+              </nextSemesterOptions>
+            </nextSemesterOptions>
+          </nextSemesterOptions>
+        </nextSemesterOptions>
+      </nextSemesterOptions>
+    </rootSemesters>
+  </programmes>
+</programmes:Listing>
