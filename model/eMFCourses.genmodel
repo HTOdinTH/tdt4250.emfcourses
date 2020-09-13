@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/EMFCourses/src-gen" creationIcons="false" editDirectory="/EMFCourses.edit/src-gen"
+    editorDirectory="/EMFCourses.editor/src-gen" modelPluginID="EMFCourses" modelName="EMFCourses"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>eMFCourses.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="EMFCourses" disposableProviderFactory="true" ecorePackage="eMFCourses.ecore#/">
+    <genClasses ecoreClass="eMFCourses.ecore#//Programmes">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference eMFCourses.ecore#//Programmes/courses"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference eMFCourses.ecore#//Programmes/programmes"/>
+    </genClasses>
+    <genClasses ecoreClass="eMFCourses.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Course/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Course/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Course/credits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eMFCourses.ecore#//Course/level"/>
+    </genClasses>
+    <genClasses ecoreClass="eMFCourses.ecore#//Programme">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference eMFCourses.ecore#//Programme/years"/>
+    </genClasses>
+    <genClasses ecoreClass="eMFCourses.ecore#//ProgrammeYear"/>
+  </genPackages>
+</genmodel:GenModel>
