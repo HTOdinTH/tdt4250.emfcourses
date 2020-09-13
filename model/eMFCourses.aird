@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis uid="_uEeWkPWwEeqpCtcv7WoM3g" selectedViews="_vn204PWwEeqpCtcv7WoM3g _X2p0EPWxEeqpCtcv7WoM3g _X3LYgPWxEeqpCtcv7WoM3g _X4VPEPWxEeqpCtcv7WoM3g" version="14.3.1.202003261200">
     <semanticResources>eMFCourses.ecore</semanticResources>
     <semanticResources>eMFCourses.genmodel</semanticResources>
+    <semanticResources>compsciprogrammes.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_vn204PWwEeqpCtcv7WoM3g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aI7_wfWxEeqpCtcv7WoM3g" name="eMFCourses class diagram" repPath="#_aI2gMPWxEeqpCtcv7WoM3g" changeId="c7071cf9-529c-4a65-947b-7ba5802c2836">
