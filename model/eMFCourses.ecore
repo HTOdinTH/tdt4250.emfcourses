@@ -1,23 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="eMFCourses" nsURI="http://www.example.org/eMFCourses" nsPrefix="eMFCourses">
-  <eClassifiers xsi:type="ecore:EClass" name="Programmes">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="eMFCourses" nsURI="platform:/plugin/EMFCourses/model/eMFCourses.ecore"
+    nsPrefix="progs">
+  <eClassifiers xsi:type="ecore:EClass" name="Listing">
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
         eType="#//Course" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="programmes" eType="#//Programme"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programmes" upperBound="-1"
+        eType="#//Programme" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Course">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" lowerBound="1" eType="#//CourseCode"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="credits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="0.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="#//LevelCode"
+        defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Programme">
     <eStructuralFeatures xsi:type="ecore:EReference" name="years" upperBound="-1"
-        eType="#//ProgrammeYear" containment="true"/>
+        eType="#//ProgrammeYear" containment="true" eOpposite="#//ProgrammeYear/programme"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProgrammeYear"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProgrammeYear">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
+        eOpposite="#//Programme/years"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slots" upperBound="-1"
+        eType="#//Slot" containment="true" eOpposite="#//Slot/year"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="pattern" value="\p{L}+\d+"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LevelCode" instanceClassName="java.lang.Char">
+    <eLiterals name="EXPHIL" literal="X"/>
+    <eLiterals name="ONE" value="1" literal="1"/>
+    <eLiterals name="TWO" value="2" literal="2"/>
+    <eLiterals name="THREE" value="3" literal="3"/>
+    <eLiterals name="HIGH" value="4" literal="H"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Slot" abstract="true"
+      interface="true">
+    <eOperations name="validChoice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="course" lowerBound="1" eType="#//Course"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="year" eType="#//ProgrammeYear"
+        eOpposite="#//ProgrammeYear/slots"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//StatusCode"
+        defaultValueLiteral="OBLIGATORY"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectionSlot" eSuperTypes="#//Slot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="options" lowerBound="1"
+        upperBound="-1" eType="#//Course"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintSlot" eSuperTypes="#//Slot"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="StatusCode" instanceClassName="java.lang.String">
+    <eLiterals name="OBLIGATORY" literal="O"/>
+    <eLiterals name="SELECTABLE_A" value="1" literal="VA"/>
+    <eLiterals name="SELECTABLE_B" value="2" literal="VB"/>
+    <eLiterals name="OPTIONAL" value="3" literal="V"/>
+  </eClassifiers>
 </ecore:EPackage>
