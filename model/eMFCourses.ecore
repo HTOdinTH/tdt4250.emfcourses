@@ -24,11 +24,11 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="equalLengths"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rootYears" lowerBound="1"
-        upperBound="-1" eType="#//Year" containment="true" eOpposite="#//Year/programme"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootYears" lowerBound="1"
+        upperBound="-1" eType="#//Year" containment="true" eOpposite="#//Year/programme"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
@@ -43,23 +43,23 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
         eOpposite="#//Programme/rootYears"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="semesters" lowerBound="2"
-        upperBound="2" eType="#//Semester" containment="true" eOpposite="#//Semester/year"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextYearOptions" upperBound="-1"
-        eType="#//Year" containment="true" eOpposite="#//Year/previousYear"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="previousYear" eType="#//Year"
-        eOpposite="#//Year/nextYearOptions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Specialization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousYear" eType="#//Year"
+        eOpposite="#//Year/nextYearOptions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextYearOptions" upperBound="-1"
+        eType="#//Year" containment="true" eOpposite="#//Year/previousYear"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semesters" lowerBound="2"
+        upperBound="2" eType="#//Semester" containment="true" eOpposite="#//Semester/year"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="slots" upperBound="-1"
-        eType="#//Slot" containment="true" eOpposite="#//Slot/semester"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Specialization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="year" lowerBound="1" eType="#//Year"
         eOpposite="#//Year/semesters"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slots" upperBound="-1"
+        eType="#//Slot" containment="true" eOpposite="#//Slot/semester"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Season" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
@@ -67,12 +67,12 @@
     <eOperations name="validChoice" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eParameters name="course" lowerBound="1" eType="#//Course"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxCredits" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="7.5"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="semester" eType="#//Semester"
         eOpposite="#//Semester/slots"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" lowerBound="1"
         eType="#//StatusCode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxCredits" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="7.5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelectionSlot" eSuperTypes="#//Slot">
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" ordered="false"
