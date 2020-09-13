@@ -5,6 +5,19 @@ By Odin Johan Vatne (HTOdinTH) and Joakim Danielsen Petersen (joakimdp)
 
 ## Structure
 
-...
+The ECore model is found in model/eMFCourses.ecore.
+The generated code is found in src-gen.
+bin and META-INF are not relevant.
+
+Manual code can be found in:
+src-gen/eMFCourses.impl:
+- ConstraintSlotImpl line 199
+- ProgrammeImpl lines 194, 210
+- SelectionSlotImpl line 226
+- SemesterImpl lines 155, 215
+- YearImpl line 219
+
+src-gen/eMFCourses.util:
+- EMFCoursesValidator line 171
 
 
