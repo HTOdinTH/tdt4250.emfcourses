@@ -11,13 +11,14 @@ bin and META-INF are not relevant.
 
 Manual code can be found in:
 src-gen/eMFCourses.impl:
-- ConstraintSlotImpl line 199
-- ProgrammeImpl lines 194, 210
-- SelectionSlotImpl line 226
-- SemesterImpl lines 155, 215
-- YearImpl line 219
+- ConstraintSlotImpl 
+- ProgrammeImpl 
+- SelectionSlotImpl 
+- SemesterImpl 
+- YearImpl 
 
 src-gen/eMFCourses.util:
-- EMFCoursesValidator line 171
+- EMFCoursesValidator
 
+(lookup "@generated NOT")
 
