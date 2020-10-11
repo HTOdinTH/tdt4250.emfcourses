@@ -440,10 +440,6 @@
       name="Algoritmer for bioinformatikk"
       credits="7.5"
       level="H"/>
-  <courses code="TDT4265"
-      name="Datasyn og dyp læring"
-      credits="7.5"
-      level="H"/>
   <programmes
       code="MTDT"
       name="Datateknologi">
@@ -516,12 +512,10 @@
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VA"
-                  maxCredits="15.0"
                   options="TDT4237 TDT4242 TDT4245"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
-                  maxCredits="15.0"
                   options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
@@ -567,12 +561,10 @@
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VA"
-                  maxCredits="15.0"
                   options="TDT4237 TDT4257 TDT4245"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
-                  maxCredits="15.0"
                   options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
@@ -618,12 +610,10 @@
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VA"
-                  maxCredits="15.0"
                   options="TDT4237 TDT4242 TDT4257"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
-                  maxCredits="15.0"
                   options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
@@ -833,30 +823,30 @@
           </nextYearOptions>
         </nextYearOptions>
         <nextYearOptions
-            Specialization="Kunstig Intelligens">
+            Specialization="Databaser og Søk">
           <semesters>
             <slots
                 xsi:type="programmes:SelectionSlot"
                 maxCredits="22.5"
-                options="TDT4136 TDT4175 TMA4135"/>
+                options="TDT4136 TMA4135 TDT4117"/>
             <slots
                 xsi:type="programmes:SelectionSlot"
                 status="VA"
-                options="IT2810 TDT4117 TDT4137 TDT4165 TDT4258"/>
+                options="IT2810 TDT4137 TDT4165 TDT4258 TDT4175"/>
           </semesters>
           <semesters>
             <slots
                 xsi:type="programmes:SelectionSlot"
                 maxCredits="30.0"
-                options="TDT4186 TDT4240 TFY4125 TIØ4258"/>
+                options="TDT4186 TFY4125 TIØ4258 TDT4300"/>
           </semesters>
           <nextYearOptions
-              Specialization="Digital Virksomhetsutvikling">
+              Specialization="Databaser og Søk">
             <semesters>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   maxCredits="22.5"
-                  options="TDT4290 TDT4252"/>
+                  options="TDT4290 TDT4225"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
@@ -865,105 +855,19 @@
             <semesters>
               <slots
                   xsi:type="programmes:SelectionSlot"
-                  options="TDT4257"/>
+                  options="TDT4305"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VA"
-                  maxCredits="15.0"
-                  options="TDT4215 TDT4237 TDT4242"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="V"
-                  options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
-            </semesters>
-            <nextYearOptions
-                Specialization="Master">
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="22.5"
-                    options="TDT4501 TDT4506"/>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    status="VB"
-                    options="AAR4250 BSOL4610 FI3107"/>
-              </semesters>
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="30.0"
-                    options="TDT4900"/>
-              </semesters>
-            </nextYearOptions>
-          </nextYearOptions>
-          <nextYearOptions
-              Specialization="Programvareutvikling">
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  maxCredits="22.5"
-                  options="IT3402 TDT4290"/>
+                  options="TDT4237 TDT4150 TDT4265"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
-                  options="AAR4250 BSOL4610 FI3107"/>
-            </semesters>
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  options="TDT4245"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="VA"
-                  maxCredits="15.0"
-                  options="TDT4215 TDT4237 TDT4242"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="V"
-                  options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
-            </semesters>
-            <nextYearOptions
-                Specialization="Master">
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="22.5"
-                    options="TDT4501 TDT4506"/>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    status="VB"
-                    options="AAR4250 BSOL4610 FI3107"/>
-              </semesters>
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="30.0"
-                    options="TDT4900"/>
-              </semesters>
-            </nextYearOptions>
-          </nextYearOptions>
-          <nextYearOptions
-              Specialization="Interaksjonsdesign og Spillteknologi">
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  maxCredits="22.5"
-                  options="TDT4290 TDT4250"/>
+                  options="TDT4310"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
-                  options="AAR4250 BSOL4610 FI3107"/>
-            </semesters>
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  maxCredits="30.0"
-                  options="TDT4242"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="VA"
-                  maxCredits="15.0"
-                  options="TDT4215 TDT4237 TDT4242"/>
+                  options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="V"
@@ -991,12 +895,12 @@
           </nextYearOptions>
         </nextYearOptions>
         <nextYearOptions
-            Specialization="Databaser og Søk">
+            Specialization="Kunstig Intelligens">
           <semesters>
             <slots
                 xsi:type="programmes:SelectionSlot"
                 maxCredits="22.5"
-                options="TDT4136 TDT4175 TMA4135"/>
+                options="TDT4136 TMA4135 TDT4137"/>
             <slots
                 xsi:type="programmes:SelectionSlot"
                 status="VA"
@@ -1006,15 +910,15 @@
             <slots
                 xsi:type="programmes:SelectionSlot"
                 maxCredits="30.0"
-                options="TDT4186 TDT4240 TFY4125 TIØ4258"/>
+                options="TDT4186 TFY4125 TIØ4258 TDT4171"/>
           </semesters>
           <nextYearOptions
-              Specialization="Digital Virksomhetsutvikling">
+              Specialization="Kunstig Intelligens">
             <semesters>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   maxCredits="22.5"
-                  options="TDT4290 TDT4252"/>
+                  options="TDT4290 TDT4173"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
@@ -1023,105 +927,19 @@
             <semesters>
               <slots
                   xsi:type="programmes:SelectionSlot"
-                  options="TDT4257"/>
+                  options="IT3105"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VA"
-                  maxCredits="15.0"
-                  options="TDT4215 TDT4237 TDT4242"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="V"
-                  options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
-            </semesters>
-            <nextYearOptions
-                Specialization="Master">
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="22.5"
-                    options="TDT4501 TDT4506"/>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    status="VB"
-                    options="AAR4250 BSOL4610 FI3107"/>
-              </semesters>
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="30.0"
-                    options="TDT4900"/>
-              </semesters>
-            </nextYearOptions>
-          </nextYearOptions>
-          <nextYearOptions
-              Specialization="Programvareutvikling">
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  maxCredits="22.5"
-                  options="IT3402 TDT4290"/>
+                  options="IT3708 TDT4310 IT3030"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
-                  options="AAR4250 BSOL4610 FI3107"/>
-            </semesters>
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  options="TDT4245"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="VA"
-                  maxCredits="15.0"
-                  options="TDT4215 TDT4237 TDT4242"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="V"
-                  options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
-            </semesters>
-            <nextYearOptions
-                Specialization="Master">
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="22.5"
-                    options="TDT4501 TDT4506"/>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    status="VB"
-                    options="AAR4250 BSOL4610 FI3107"/>
-              </semesters>
-              <semesters>
-                <slots
-                    xsi:type="programmes:SelectionSlot"
-                    maxCredits="30.0"
-                    options="TDT4900"/>
-              </semesters>
-            </nextYearOptions>
-          </nextYearOptions>
-          <nextYearOptions
-              Specialization="Interaksjonsdesign og Spillteknologi">
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  maxCredits="22.5"
-                  options="TDT4290 TDT4250"/>
+                  options="TDT4265 TDT4237 TDT4305"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="VB"
-                  options="AAR4250 BSOL4610 FI3107"/>
-            </semesters>
-            <semesters>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  maxCredits="30.0"
-                  options="TDT4242"/>
-              <slots
-                  xsi:type="programmes:SelectionSlot"
-                  status="VA"
-                  maxCredits="15.0"
-                  options="TDT4215 TDT4237 TDT4242"/>
+                  options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175"/>
               <slots
                   xsi:type="programmes:SelectionSlot"
                   status="V"
@@ -1173,12 +991,15 @@
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VA"
-            maxCredits="15.0"
             options="TDT4205 TDT4230 TDT4237 TDT4260 TDT4265"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
       <nextYearOptions>
         <semesters>
@@ -1215,14 +1036,18 @@
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VA"
-            maxCredits="15.0"
             options="TDT4150 TDT4173 TDT4215 TDT4305"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"
@@ -1256,14 +1081,18 @@
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VA"
-            maxCredits="15.0"
             options="TDT4125 TDT4205 TDT4230 TDT4237 TDT4265"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"
@@ -1296,14 +1125,18 @@
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VA"
-            maxCredits="15.0"
             options="TDT4215 TDT4242 TDT4245 TDT4257 TDT4300"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"
@@ -1337,14 +1170,18 @@
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VA"
-            maxCredits="15.0"
             options="TDT4215 TDT4242 TDT4245 TDT4257"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"
@@ -1379,14 +1216,19 @@
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VA"
-            maxCredits="15.0"
             options="IT3708 TDT4173 TDT4215 TDT4300 TDT4305"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
+            maxCredits="15.0"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"
@@ -1421,14 +1263,18 @@
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VA"
-            maxCredits="15.0"
             options="TDT4215 TDT4242 TDT4245 TDT4257"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"
@@ -1461,14 +1307,19 @@
             options="TDT4230"/>
         <slots
             xsi:type="programmes:SelectionSlot"
-            maxCredits="15.0"
-            options="TDT4125 TDT4173 TDT4205 TDT4260 TDT4265"/>
+            status="VA"
+            options="TDT4125 TDT4173 TDT4230 TDT4205 TDT4260 TDT4265"/>
         <slots
             xsi:type="programmes:SelectionSlot"
             status="VB"
             options="MEDT4165 MOL4010 TET4120 TDT4220 TMA4105 TTK4130 TTK4135 TTK4175 TTM4135"/>
+        <slots
+            xsi:type="programmes:SelectionSlot"
+            status="V"
+            options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"
