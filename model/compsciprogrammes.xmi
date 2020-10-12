@@ -442,7 +442,7 @@
       level="H"/>
   <programmes
       code="MTDT"
-      name="Datateknologi">
+      name="Datateknologi (5år)">
     <rootYears
         Specialization="1">
       <semesters>
@@ -971,7 +971,7 @@
   </programmes>
   <programmes
       code="MIDT"
-      name="Datateknologi">
+      name="Datateknologi (2år)">
     <rootYears
         Specialization="Algoritmer og HPC">
       <semesters>
@@ -1001,7 +1001,8 @@
             status="V"
             options="TBA4859 TBA4861 TBA4850 TD4857 TDT4860 TEP4851 TEP4853"/>
       </semesters>
-      <nextYearOptions>
+      <nextYearOptions
+          Specialization="Master">
         <semesters>
           <slots
               xsi:type="programmes:SelectionSlot"

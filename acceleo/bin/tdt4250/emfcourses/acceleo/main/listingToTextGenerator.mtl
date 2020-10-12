@@ -21,43 +21,62 @@
   
     <body>
       <h1>[programme.code /] &ndash; [programme.name /]</h2>
-      [for (year : Year | programme.rootYears)]
-        [generate(year) /]
-      [/for]
+	  [if (programme.rootYears->size() > 1)]
+	    <div style="display:flex;flex-direction:row;">
+        [for (year : Year | programme.rootYears)]
+          [generate(year) /]
+        [/for]
+	    </div>
+	  [/if]
+	  [if (programme.rootYears->size() = 1)]
+	    <div style="display:flex;flex-direction:column;">
+		  [generate(programme.rootYears->first()) /]
+		</div>
+	  [/if]
     </body>
   </html>
   [/file]
 [/template]
 
 [template public generate(year : Year)]
-	<h2>Year &ndash; [year.Specialization /]</h2>
-  [for (semester : Semester | year.semesters)]
-  	[generate(semester) /]
-  [/for]
+<div style="border: 1px solid black;width: fit-content;">
+  <h2>Year &ndash; [year.Specialization /]</h2>
+    [generate(year.semesters->at(1), 'Hoest')/]
+    [generate(year.semesters->at(2), 'Vaar')/]
+
+<div style="display:flex;flex-direction:row;">
   [for (nextYear : Year | year.nextYearOptions)]
   	[generate(nextYear) /]
   [/for]
+</div>
+</div>
+
 [/template]
 
-[template public generate(semester : Semester)]
-	<h3>[semester.Season /]semester</h3>
-  <ul>
-  [for (slot : Slot | semester.slots)]
-    <li>[generate(slot) /]</li>
-  [/for]
-  <ul>
+[template public generate(semester : Semester, season : String)]
+	<h3>[season /]semester</h3>
+  <table>
+    <tr><th>Code</th><th>Name</th><th>Credits</th><th>Type</th></tr>
+    [for (slot : Slot | semester.slots)]
+      <tr style="display: block; border-bottom: 1px solid #000;"></tr>
+      [generate(slot) /]
+    [/for]
+  </table>
 [/template]
 
 [template public generate(slot : Slot)][/template]
 
 [template public generate(slot : SelectionSlot)]
-	<ul>
     [for (course : Course | slot.options)]
-    	[generate(course) /]
+    	[generate(course, slot.status.toString()) /]
     [/for]
-  </ul>
 [/template]
 
-[template public generate(course : Course)]
-	<li>[course.code /] &ndash; [course.name /]</li>
+[template public generate(course : Course, type : String)]
+	<tr>
+	  <td>[course.code /]</td>
+	  <td>[course.name /]</td>
+	  <td>[course.credits /]</td>
+	  <td>[type /]</td>
+	</tr>
 [/template]
