@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="listingToTextGenerator" nsURI="tdt4250::emfcourses::acceleo::main::listingToTextGenerator" startHeaderPosition="30" endHeaderPosition="232">
+    <input>
+      <takesTypesFrom href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateListing" visibility="Public" main="true">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  "/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/generate">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generateListing/%/programme">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <loopVariable name="programme">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/Set(Programme)">
+          <source xsi:type="ocl.ecore:VariableExp" name="listing" referredVariable="/0/generateListing/listing">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing/programmes"/>
+        </iterSet>
+      </body>
+      <parameter name="listing">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generate" visibility="Public">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &lt;!DOCTYPE html>&#xD;&#xA;  &lt;html>&#xD;&#xA;    &lt;head>&#xD;&#xA;      &lt;title>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generate/programme">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme/code"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &amp;ndash; "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generate/programme">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/title>&#xD;&#xA;      &lt;meta charset=&quot;etf-8&quot; />&#xD;&#xA;    &lt;/head>&#xD;&#xA;  &#xD;&#xA;    &lt;body>&#xD;&#xA;      &lt;h1>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generate/programme">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme/code"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &amp;ndash; "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generate/programme">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h2>&#xD;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="        "/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/generate.1">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="year" referredVariable="/0/generate/%/%.9/year">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <loopVariable name="year">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Year)">
+            <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generate/programme">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme/rootYears"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    &lt;/body>&#xD;&#xA;  &lt;/html>&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generate/programme">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme/code"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="programme">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generate" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;h2>Year &amp;ndash; "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="year" referredVariable="/0/generate.1/year">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year/Specialization"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h2>&#xD;&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/generate.2">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generate.1/%.3/semester">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <loopVariable name="semester">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Semester)">
+          <source xsi:type="ocl.ecore:VariableExp" name="year" referredVariable="/0/generate.1/year">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year/semesters"/>
+        </iterSet>
+      </body>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/generate.1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="nextYear" referredVariable="/0/generate.1/%.4/nextYear">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <loopVariable name="nextYear">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Year)">
+          <source xsi:type="ocl.ecore:VariableExp" name="year" referredVariable="/0/generate.1/year">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year/nextYearOptions"/>
+        </iterSet>
+      </body>
+      <parameter name="year">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generate" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;h3>"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generate.2/semester">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester/Season"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="semester&lt;/h3>&#xD;&#xA;  &lt;ul>&#xD;&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    &lt;li>"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/generate.3">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="slot" referredVariable="/0/generate.2/%.3/slot">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/li>&#xD;&#xA;"/>
+        <loopVariable name="slot">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Slot)">
+          <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generate.2/semester">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester/slots"/>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &lt;ul>"/>
+      <parameter name="semester">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generate" visibility="Public">
+      <parameter name="slot">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generate" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;ul>&#xD;&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    &#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/generate.5">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="course" referredVariable="/0/generate.4/%.1/course">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <loopVariable name="course">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/Set(Course)">
+          <source xsi:type="ocl.ecore:VariableExp" name="slot" referredVariable="/0/generate.4/slot">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot/options"/>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &lt;/ul>"/>
+      <parameter name="slot">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generate" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;li>"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="course" referredVariable="/0/generate.5/course">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course/code"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &amp;ndash; "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="course" referredVariable="/0/generate.5/course">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/li>"/>
+      <parameter name="course">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateListing">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateListing"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="listing">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generate">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generate"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="programme">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generate">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generate.1"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="year">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generate">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generate.2"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="semester">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generate">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generate.3"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="slot">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generate">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generate.4"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="slot">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generate">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generate.5"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="course">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="eMFCourses_Listing_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="eMFCourses_Programme_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="eMFCourses_Year_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="eMFCourses_Semester_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="eMFCourses_Slot_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="eMFCourses_SelectionSlot_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="eMFCourses_Course_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Programme)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Year)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Semester)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Slot)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Course)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Listing"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Year"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Slot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//SelectionSlot"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/EMFCourses/model/eMFCourses.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateListing">
+      <details key="start" value="162"/>
+      <details key="end" value="334"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateListing/%">
+      <details key="start" value="236"/>
+      <details key="end" value="321"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateListing/%/%">
+      <details key="start" value="288"/>
+      <details key="end" value="290"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateListing/%/%.1">
+      <details key="start" value="291"/>
+      <details key="end" value="310"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateListing/%/%.1/programme">
+      <details key="start" value="300"/>
+      <details key="end" value="309"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateListing/%/%.2">
+      <details key="start" value="313"/>
+      <details key="end" value="315"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateListing/%/programme">
+      <details key="start" value="242"/>
+      <details key="end" value="263"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateListing/%/%.3">
+      <details key="start" value="266"/>
+      <details key="end" value="284"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateListing/%/%.3/listing">
+      <details key="start" value="266"/>
+      <details key="end" value="273"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateListing/listing">
+      <details key="start" value="195"/>
+      <details key="end" value="212"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generate">
+      <details key="start" value="340"/>
+      <details key="end" value="818"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generate/%">
+      <details key="start" value="392"/>
+      <details key="end" value="805"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generate/%/%">
+      <details key="start" value="449"/>
+      <details key="end" value="503"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generate/%/%.1">
+      <details key="start" value="504"/>
+      <details key="end" value="518"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generate/%/%.1/programme">
+      <details key="start" value="504"/>
+      <details key="end" value="513"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generate/%/%.2">
+      <details key="start" value="521"/>
+      <details key="end" value="530"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generate/%/%.3">
+      <details key="start" value="531"/>
+      <details key="end" value="545"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generate/%/%.3/programme">
+      <details key="start" value="531"/>
+      <details key="end" value="540"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generate/%/%.4">
+      <details key="start" value="548"/>
+      <details key="end" value="629"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generate/%/%.5">
+      <details key="start" value="630"/>
+      <details key="end" value="644"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generate/%/%.5/programme">
+      <details key="start" value="630"/>
+      <details key="end" value="639"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generate/%/%.6">
+      <details key="start" value="647"/>
+      <details key="end" value="656"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generate/%/%.7">
+      <details key="start" value="657"/>
+      <details key="end" value="671"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generate/%/%.7/programme">
+      <details key="start" value="657"/>
+      <details key="end" value="666"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generate/%/%.8">
+      <details key="start" value="674"/>
+      <details key="end" value="681"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generate/%/%.9">
+      <details key="start" value="687"/>
+      <details key="end" value="770"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generate/%/%.9/%">
+      <details key="start" value="730"/>
+      <details key="end" value="738"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generate/%/%.9/%.1">
+      <details key="start" value="739"/>
+      <details key="end" value="753"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generate/%/%.9/%.1/year">
+      <details key="start" value="748"/>
+      <details key="end" value="752"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generate/%/%.9/%.2">
+      <details key="start" value="756"/>
+      <details key="end" value="758"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generate/%/%.9/year">
+      <details key="start" value="693"/>
+      <details key="end" value="704"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generate/%/%.9/%.3">
+      <details key="start" value="707"/>
+      <details key="end" value="726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generate/%/%.9/%.3/programme">
+      <details key="start" value="707"/>
+      <details key="end" value="716"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generate/%/%.10">
+      <details key="start" value="772"/>
+      <details key="end" value="796"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generate/%/%.11">
+      <details key="start" value="399"/>
+      <details key="end" value="429"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generate/%/%.11/%">
+      <details key="start" value="399"/>
+      <details key="end" value="413"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generate/%/%.11/%/programme">
+      <details key="start" value="399"/>
+      <details key="end" value="408"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generate/%/%.11/%.1">
+      <details key="start" value="421"/>
+      <details key="end" value="428"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generate/%/%.12">
+      <details key="start" value="438"/>
+      <details key="end" value="445"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generate/programme">
+      <details key="start" value="366"/>
+      <details key="end" value="387"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generate.1">
+      <details key="start" value="822"/>
+      <details key="end" value="1094"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generate.1/%">
+      <details key="start" value="863"/>
+      <details key="end" value="881"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generate.1/%.1">
+      <details key="start" value="882"/>
+      <details key="end" value="901"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generate.1/%.1/year">
+      <details key="start" value="882"/>
+      <details key="end" value="886"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generate.1/%.2">
+      <details key="start" value="904"/>
+      <details key="end" value="911"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generate.1/%.3">
+      <details key="start" value="913"/>
+      <details key="end" value="994"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generate.1/%.3/%">
+      <details key="start" value="959"/>
+      <details key="end" value="962"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generate.1/%.3/%.1">
+      <details key="start" value="963"/>
+      <details key="end" value="981"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generate.1/%.3/%.1/semester">
+      <details key="start" value="972"/>
+      <details key="end" value="980"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generate.1/%.3/%.2">
+      <details key="start" value="984"/>
+      <details key="end" value="986"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generate.1/%.3/semester">
+      <details key="start" value="919"/>
+      <details key="end" value="938"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generate.1/%.3/%.3">
+      <details key="start" value="941"/>
+      <details key="end" value="955"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generate.1/%.3/%.3/year">
+      <details key="start" value="941"/>
+      <details key="end" value="945"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generate.1/%.4">
+      <details key="start" value="998"/>
+      <details key="end" value="1081"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generate.1/%.4/%">
+      <details key="start" value="1046"/>
+      <details key="end" value="1049"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generate.1/%.4/%.1">
+      <details key="start" value="1050"/>
+      <details key="end" value="1068"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generate.1/%.4/%.1/nextYear">
+      <details key="start" value="1059"/>
+      <details key="end" value="1067"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generate.1/%.4/%.2">
+      <details key="start" value="1071"/>
+      <details key="end" value="1073"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generate.1/%.4/nextYear">
+      <details key="start" value="1004"/>
+      <details key="end" value="1019"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generate.1/%.4/%.3">
+      <details key="start" value="1022"/>
+      <details key="end" value="1042"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generate.1/%.4/%.3/year">
+      <details key="start" value="1022"/>
+      <details key="end" value="1026"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generate.1/year">
+      <details key="start" value="848"/>
+      <details key="end" value="859"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generate.2">
+      <details key="start" value="1098"/>
+      <details key="end" value="1296"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generate.2/%">
+      <details key="start" value="1147"/>
+      <details key="end" value="1152"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generate.2/%.1">
+      <details key="start" value="1153"/>
+      <details key="end" value="1168"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generate.2/%.1/semester">
+      <details key="start" value="1153"/>
+      <details key="end" value="1161"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generate.2/%.2">
+      <details key="start" value="1171"/>
+      <details key="end" value="1194"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generate.2/%.3">
+      <details key="start" value="1196"/>
+      <details key="end" value="1275"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generate.2/%.3/%">
+      <details key="start" value="1234"/>
+      <details key="end" value="1242"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generate.2/%.3/%.1">
+      <details key="start" value="1243"/>
+      <details key="end" value="1257"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generate.2/%.3/%.1/slot">
+      <details key="start" value="1252"/>
+      <details key="end" value="1256"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generate.2/%.3/%.2">
+      <details key="start" value="1260"/>
+      <details key="end" value="1267"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generate.2/%.3/slot">
+      <details key="start" value="1202"/>
+      <details key="end" value="1213"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generate.2/%.3/%.3">
+      <details key="start" value="1216"/>
+      <details key="end" value="1230"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generate.2/%.3/%.3/semester">
+      <details key="start" value="1216"/>
+      <details key="end" value="1224"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generate.2/%.4">
+      <details key="start" value="1277"/>
+      <details key="end" value="1283"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generate.2/semester">
+      <details key="start" value="1124"/>
+      <details key="end" value="1143"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generate.3">
+      <details key="start" value="1300"/>
+      <details key="end" value="1350"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generate.3/slot">
+      <details key="start" value="1326"/>
+      <details key="end" value="1337"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generate.4">
+      <details key="start" value="1354"/>
+      <details key="end" value="1514"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generate.4/%">
+      <details key="start" value="1404"/>
+      <details key="end" value="1411"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generate.4/%.1">
+      <details key="start" value="1415"/>
+      <details key="end" value="1492"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generate.4/%.1/%">
+      <details key="start" value="1455"/>
+      <details key="end" value="1460"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generate.4/%.1/%.1">
+      <details key="start" value="1461"/>
+      <details key="end" value="1477"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generate.4/%.1/%.1/course">
+      <details key="start" value="1470"/>
+      <details key="end" value="1476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generate.4/%.1/%.2">
+      <details key="start" value="1480"/>
+      <details key="end" value="1482"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generate.4/%.1/course">
+      <details key="start" value="1421"/>
+      <details key="end" value="1436"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generate.4/%.1/%.3">
+      <details key="start" value="1439"/>
+      <details key="end" value="1451"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generate.4/%.1/%.3/slot">
+      <details key="start" value="1439"/>
+      <details key="end" value="1443"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generate.4/%.2">
+      <details key="start" value="1494"/>
+      <details key="end" value="1501"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generate.4/slot">
+      <details key="start" value="1380"/>
+      <details key="end" value="1400"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generate.5">
+      <details key="start" value="1518"/>
+      <details key="end" value="1625"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generate.5/%">
+      <details key="start" value="1563"/>
+      <details key="end" value="1568"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generate.5/%.1">
+      <details key="start" value="1569"/>
+      <details key="end" value="1580"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generate.5/%.1/course">
+      <details key="start" value="1569"/>
+      <details key="end" value="1575"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generate.5/%.2">
+      <details key="start" value="1583"/>
+      <details key="end" value="1592"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generate.5/%.3">
+      <details key="start" value="1593"/>
+      <details key="end" value="1604"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generate.5/%.3/course">
+      <details key="start" value="1593"/>
+      <details key="end" value="1599"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generate.5/%.4">
+      <details key="start" value="1607"/>
+      <details key="end" value="1612"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generate.5/course">
+      <details key="start" value="1544"/>
+      <details key="end" value="1559"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
