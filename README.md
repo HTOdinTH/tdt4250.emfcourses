@@ -22,3 +22,10 @@ src-gen/eMFCourses.util:
 
 (lookup "@generated NOT")
 
+
+## Transformation
+
+To run the transformation on the instance model from assignment 1,
+navigate to the file `listingToTextGenerator.mtl` in the acceleo
+project, right click it and select Run As... > Launch Acceleo Application.
+The result can be found in the directory `target` in the same project.

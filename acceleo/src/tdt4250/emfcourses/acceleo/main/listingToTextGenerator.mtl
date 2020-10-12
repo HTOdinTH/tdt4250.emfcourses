@@ -1,0 +1,63 @@
+[comment encoding = UTF-8 /]
+[module listingToTextGenerator('platform:/plugin/EMFCourses/model/eMFCourses.ecore', 'http://www.eclipse.org/emf/2002/Ecore')]
+
+
+[template public generateListing(listing : Listing)]
+[comment @main  /]
+[for (programme : Programme | listing.programmes)]
+  [generate(programme) /]
+[/for]
+[/template]
+
+
+[template public generate(programme : Programme)]
+	[file (programme.code.concat('.html'), false, 'UTF-8')]
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>[programme.code /] &ndash; [programme.name /]</title>
+      <meta charset="etf-8" />
+    </head>
+  
+    <body>
+      <h1>[programme.code /] &ndash; [programme.name /]</h2>
+      [for (year : Year | programme.rootYears)]
+        [generate(year) /]
+      [/for]
+    </body>
+  </html>
+  [/file]
+[/template]
+
+[template public generate(year : Year)]
+	<h2>Year &ndash; [year.Specialization /]</h2>
+  [for (semester : Semester | year.semesters)]
+  	[generate(semester) /]
+  [/for]
+  [for (nextYear : Year | year.nextYearOptions)]
+  	[generate(nextYear) /]
+  [/for]
+[/template]
+
+[template public generate(semester : Semester)]
+	<h3>[semester.Season /]semester</h3>
+  <ul>
+  [for (slot : Slot | semester.slots)]
+    <li>[generate(slot) /]</li>
+  [/for]
+  <ul>
+[/template]
+
+[template public generate(slot : Slot)][/template]
+
+[template public generate(slot : SelectionSlot)]
+	<ul>
+    [for (course : Course | slot.options)]
+    	[generate(course) /]
+    [/for]
+  </ul>
+[/template]
+
+[template public generate(course : Course)]
+	<li>[course.code /] &ndash; [course.name /]</li>
+[/template]
